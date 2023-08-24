@@ -35,3 +35,23 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: 'apple';
+  font-weight: 600;
+  src: url("../fonts/AppleSDGothicNeoB.ttf") format('truetype');
+}
+
+@font-face {
+font-family: 'apple-gothic';
+font-weight: 100;
+src: url("../fonts/AppleSDGothicNeoM.ttf") format('truetype');
+}
+
+h2 {
+  font-family: 'apple';
+}
+
+span, p, li, button {
+font-family: 'apple-gothic';
+}
