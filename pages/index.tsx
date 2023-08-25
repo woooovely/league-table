@@ -3,14 +3,16 @@ import MainHeader from "@/components/MainHeader";
 import styled from 'styled-components'
 import league from '@/assets/svgs/league.svg';
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Home = () => {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
         <title>Soccer Table</title>
       </Head>
-      <MainHeader />
       <Container>
         <IntroduceContainer>
           <Section>
@@ -27,7 +29,7 @@ const Home = () => {
               <Image src={league} alt="리그" />
             </Right>
           </Section>
-          <Button>둘러보기</Button>
+          <Button onClick={() => router.push('/pl/rank')}>둘러보기</Button>
         </IntroduceContainer>
       </Container>
     </div>
