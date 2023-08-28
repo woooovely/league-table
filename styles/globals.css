@@ -52,6 +52,6 @@ h2 {
   font-family: 'apple';
 }
 
-span, p, li, button {
+span, p, li, button, td, tr, th {
 font-family: 'apple-gothic';
 }
