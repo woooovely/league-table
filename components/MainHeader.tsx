@@ -11,7 +11,7 @@ const MainHeader = () => {
         <LogoText onClick={() => router.push("/")}>Soccer Table</LogoText>
         <CategoryContainer>
           <Categories>
-            <LinkStyle href="/pl/rank">프리미어리그</LinkStyle>
+            <LinkStyle href="/premier/rank">프리미어리그</LinkStyle>
           </Categories>
           <Categories> 
             <LinkStyle href="/bundes/rank">분데스리가</LinkStyle>
