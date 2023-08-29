@@ -2,7 +2,7 @@ import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
 import axios from "axios";
-import * as S from "@/styles/pl/index";
+import * as S from "@/styles/pl/rank";
 import { plTeamsName } from "@/constants/constants";
 
 interface CompetitionProps {
