@@ -3,7 +3,6 @@ import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
 import axios from "axios";
 import * as S from '@/styles/pl/scorer';
-import Image from "next/image";
 import { nationality, plPlayerName, plTeamsName } from "@/constants/constants";
 
 interface CompetitionProps {

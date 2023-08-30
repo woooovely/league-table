@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 `
 
 export const Table = styled.table`
   border-collapse: collapse;
-  width: 500px;
-  margin-top: 50px;
+  width: 600px;
   margin: 0 auto;
   margin-bottom: 60px;
 `;
@@ -23,7 +23,6 @@ export const Body = styled.tbody``;
 export const TableTr = styled.tr`
   background-color: white;
   font-weight: normal;
-  font-family: 'Pretendard';
 `;
 
 export const TableTh = styled.th`
