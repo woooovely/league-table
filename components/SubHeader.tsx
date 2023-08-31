@@ -41,7 +41,11 @@ const LinkStyle = styled(Link)<SubHeaderProps>`
       ? "black"
       : props.league === "bundes"
       ? "white"
-      : "black"};
+      : props.league === "laliga"
+      ? "white"
+      : props.league === "serie"
+      ? "white"
+      : "white"};
   font-size: 19px;
 `;
 
@@ -64,7 +68,11 @@ const HeaderContainer = styled.nav<SubHeaderProps>`
       ? "url('/premier_header.svg')"
       : props.league === "bundes"
       ? "url('/bundes_header.svg')"
-      : "url('../assets/svgs/league.svg')"};
+      : props.league === "laliga"
+      ? "url('/laliga_header.svg')"
+      : props.league === "serie"
+      ? "url('/serie_header.svg')"
+      : "url('/league_header.svg')"};
   background-size: cover;
   display: flex;
   align-items: center;
