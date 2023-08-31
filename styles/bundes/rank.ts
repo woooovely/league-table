@@ -4,7 +4,7 @@ export const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 `
 
 export const Table = styled.table`
@@ -119,4 +119,10 @@ export const TeamName = styled.div`
 
 export const LoadingText = styled.h3`
   text-align: center;
+`
+
+export const Date = styled.p`
+  text-align: center;
+  margin-bottom: 100px;
+  font-weight: 600;
 `

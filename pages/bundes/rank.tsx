@@ -12,6 +12,12 @@ interface CompetitionProps {
     emblem: string;
 }
 
+interface SeasonProps {
+    id: number;
+    startDate: string;
+    endDate: string;
+}
+
 interface TeamProps {
     id: number;
     name: string;
@@ -35,9 +41,10 @@ interface Team {
 interface TableDataProps {
     table: Team[];
     competition: CompetitionProps;
+    season: SeasonProps;
 }
 
-const BundesRank = ({ table, competition }: TableDataProps) => {
+const BundesRank = ({ table, competition, season }: TableDataProps) => {
     return (
         <div>
             <Head>
@@ -48,6 +55,7 @@ const BundesRank = ({ table, competition }: TableDataProps) => {
             <S.LogoContainer>
                 <img src={competition.emblem} alt="리그 로고" />
             </S.LogoContainer>
+            <S.Date>{season.startDate} ~ {season.endDate}</S.Date>
             <S.Table>
                 <S.Head>
                     <S.TableTr>
@@ -99,6 +107,7 @@ export const getServerSideProps = async () => {
             props: {
                 table: tableData.standings[0].table,
                 competition: tableData.competition,
+                season: tableData.season,
             }
         }
     } catch (error) {
@@ -108,6 +117,7 @@ export const getServerSideProps = async () => {
             props: {
                 table: [],
                 competition: {},
+                season: {}
             }
         }
     }
