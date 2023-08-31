@@ -47,7 +47,21 @@ export const nationality: { [ key: string ]: string } = {
     "Guinea": "기니",
     "Belgium": "벨기에",
     "Czech Republic": "체코",
-    "DR Congo": "콩고민주공화국"
+    "DR Congo": "콩고민주공화국",
+    "Brazil": "브라질",
+    "Netherlands": "네덜란드",
+    "Venezuela": "베네수엘라",
+    "Uruguay": "우루과이",
+    "Argentina": "아르헨티나",
+    "Morocco": "모로코",
+    "Italy": "이탈리아",
+    "Serbia": "세르비아",
+    "USA": "미국",
+    "Egypt": "이집트",
+    "Jordan": "요르단",
+    "Japan": "일본",
+    "Portugal": "포르투갈",
+    "Colombia": "콜롬비아"
 }
 
 export const bundesTeamName: { [ key: string ]: string } = {
@@ -82,4 +96,110 @@ export const bundesPlayerName: { [ key: string ]: string } = {
     "Loïs Openda": "로이스 오펜다",
     "Tomáš Čvančara": "토마시 츠반차라",
     "Silas Katompa Mvumpa": "실라스 카톰파 음붐파"
+}
+
+export const laligaTeamName: { [ key: string ]: string } = {
+    "Real Madrid CF": "레알 마드리드",
+    "Club Atlético de Madrid": "아틀레티코 마드리드",
+    "Girona FC": "지로나",
+    "FC Barcelona": "FC 바르셀로나",
+    "Athletic Club": "아틀레틱 클럽 빌바오",
+    "CA Osasuna": "오사수나",
+    "Valencia CF": "발렌시아 CF",
+    "Rayo Vallecano de Madrid": "라요 바예카노",
+    "Real Betis Balompié": "레알 베티스",
+    "Cádiz CF": "카디스",
+    "Getafe CF": "헤타페",
+    "Real Sociedad de Fútbol": "레알 소시에다드",
+    "Villarreal CF": "비야레알",
+    "Deportivo Alavés": "데포르티보 알라베스",
+    "Granada CF": "그라나다",
+    "UD Las Palmas": "UD 라스팔마스",
+    "RCD Mallorca": "RCD 마요르카",
+    "RC Celta de Vigo": "셀타 비고",
+    "UD Almería": "알메이라",
+    "Sevilla FC": "세비야"
+}
+
+export const laligaPlayerName: { [ key: string ]: string } = {
+    "Jude Bellingham": "주드 벨링엄",
+    "Álvaro Morata": "알바로 모라타",
+    "Willian José": "윌리앙 주제",
+    "Memphis Depay": "멤피스 데파이",
+    "Marcos Llorente": "마르코스 요렌테",
+    "Gorka Guruzeta": "고르카 구루세타",
+    "Yangel Herrera": "양헬 에레라",
+    "Cristhian Stuani": "크리스티안 스투아니",
+    "Ferrán Torres": "페란 토레스",
+    "Kike García": "키케 가르시아"
+}
+
+export const serieTeamName: { [ key: string ]: string } = {
+    "AC Milan": "AC 밀란",
+    "SSC Napoli": "SSC 나폴리",
+    "FC Internazionale Milano": "인터 밀란",
+    "Hellas Verona FC": "엘라스 베로나",
+    "ACF Fiorentina": "피오렌티나",
+    "Juventus FC": "유벤투스",
+    "US Lecce": "US 레체",
+    "Atalanta BC": "아탈란타",
+    "AC Monza": "AC 몬차",
+    "Frosinone Calcio": "프로시노네 칼초",
+    "Genoa CFC": "제노아",
+    "US Salernitana 1919": "살레르니타나",
+    "AS Roma": "AS 로마",
+    "Bologna FC 1909": "볼로냐",
+    "Cagliari Calcio": "칼리아리 칼초",
+    "Torino FC": "토리노",
+    "Udinese Calcio": "우디세네 칼초",
+    "SS Lazio": "SS 라치오",
+    "Empoli FC": "엠폴리",
+    "US Sassuolo Calcio": "사수올로 칼초"
+}
+
+export const seriePlayerName: { [ key: string ]: string } = {
+    "Victor Osimhen": "빅터 오시멘",
+    "Lautaro Martínez": "라우타로 마르티네스",
+    "Olivier Giroud": "올리비에 지루",
+    "Abdou Harroui": "압두 하루이",
+    "Nicolás González": "니콜라스 곤살레스",
+    "Andrea Belotti": "안드레아 벨로티",
+    "Antonio Candreva": "안토니오 칸드레바",
+    "Dušan Vlahović": "두샨 블라호비치",
+    "Christian Pulisic": "크리스천 풀리식",
+    "Andrea Colpani": "안드레아 콜파니"
+}
+
+export const leagueTeamName: { [ key: string ]: string } = {
+    "AS Monaco FC": "AS 모나코",
+    "Olympique de Marseille": "올림피크 마르세유",
+    "Stade de Reims": "스타드 드 랭스",
+    "Stade Brestois 29": "스타드 브레스투아",
+    "RC Strasbourg Alsace": "RC 스트라스부르",
+    "Stade Rennais FC 1901": "스타드 렌",
+    "FC Lorient": "로리앙",
+    "Paris Saint-Germain FC": "파리 생제르맹",
+    "Montpellier HSC": "몽펠리에 HSC",
+    "Lille OSC": "OSC 릴",
+    "Toulouse FC": "툴루즈",
+    "FC Metz": "FC 메스",
+    "OGC Nice": "OGC 니스",
+    "Le Havre AC": "르아브르",
+    "FC Nantes": "FC 낭트",
+    "Racing Club de Lens": "RC 랑스",
+    "Olympique Lyonnais": "올림피크 리옹",
+    "Clermont Foot 63": "클레르몽 푸트"
+}
+
+export const leaguePlayerName: { [ key: string ]: string } = {
+    "Wissam Ben Yedder": "위삼 벤예데르",
+    "Romain Del Castillo": "로맹 델카스티요",
+    "Mostafa Mohamed": "무스타파 모하메드",
+    "Akor Adams": "아코르 애덤스",
+    "Musa Al Tamari": "무사 알 타마리",
+    "Kylian Mbappé": "킬리안 음바페",
+    "Takumi Minamino": "미나미노 타쿠미",
+    "Vitinha": "비티냐",
+    "Deiver Machado": "데이베르 마차도",
+    "Zakaria Aboukhlal": "자카리아 아부클랄"
 }
