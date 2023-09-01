@@ -3,9 +3,25 @@ import styled from "styled-components";
 import league from "@/assets/svgs/league.svg";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Alert from '@/components/alert';
+import { useState, useEffect } from 'react';
 
 const Home = () => {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const user = navigator.userAgent;
+    if (user.indexOf('iPhone') > -1 || user.indexOf('Android') > -1) {
+      setIsMobile(true);
+    }
+  }, [isMobile]);
+
+  if (isMobile === true) {
+    return (
+      <Alert />
+    )
+  }
 
   return (
     <div>
