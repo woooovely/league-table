@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
-import league from '@/assets/svgs/league.svg';
+import league from "@/assets/svgs/league.svg";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
