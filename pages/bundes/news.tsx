@@ -49,12 +49,15 @@ const BundesNews = ({ items }: NewsProps) => {
 
 export const getServerSideProps = async () => {
   try {
-    const response = await axios.get("http://localhost:3000/api/bundes/news", {
-      headers: {
-        "X-Naver-Client-Id": process.env.NAVER_API_TOKEN,
-        "X-Naver-Client-Secret": process.env.NAVER_SECRET_TOKEN,
-      },
-    });
+    const response = await axios.get(
+      "https://openapi.naver.com/v1/search/news.json?query=%EB%B6%84%EB%8D%B0%EC%8A%A4%EB%A6%AC%EA%B0%80&display=10&start=1&sort=sim&startDate=20230801&endDate=20230820",
+      {
+        headers: {
+          "X-Naver-Client-Id": process.env.NAVER_CLIENT_ID,
+          "X-Naver-Client-Secret": process.env.NAVER_CLIENT_SECRET,
+        },
+      }
+    );
 
     const newsData = response.data;
 

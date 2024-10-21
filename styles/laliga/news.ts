@@ -45,4 +45,5 @@ export const Detail = styled.div`
 export const NewsLink = styled.a`
   text-decoration: none;
   color: black;
+  width: 30%;
 `

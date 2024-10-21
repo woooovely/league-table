@@ -49,10 +49,10 @@ const PremierNews = ({ items }: NewsProps) => {
 
 export const getServerSideProps = async () => {
   try {
-    const response = await axios.get("http://localhost:3000/api/pl/news", {
+    const response = await axios.get("https://openapi.naver.com/v1/search/news.json?query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%EB%A6%AC%EA%B7%B8&display=10&start=1&sort=sim&startDate=20230801&endDate=20230820", {
       headers: {
-        "X-Naver-Client-Id": process.env.NAVER_API_TOKEN,
-        "X-Naver-Client-Secret": process.env.NAVER_SECRET_TOKEN,
+        "X-Naver-Client-Id": process.env.NAVER_CLIENT_ID,
+        "X-Naver-Client-Secret": process.env.NAVER_CLIENT_SECRET,
       },
     });
 

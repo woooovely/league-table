@@ -98,33 +98,25 @@ const PremierRank = ({ teams, competition, season }: TableDataProps) => {
 };
 
 export const getServerSideProps = async () => {
-  try {
-    const response = await axios.get("/api/pl/rank", {
+  const response = await axios.get(
+    `https://api.football-data.org/v4/competitions/PL/standings`,
+    {
       headers: {
-        "X-Auth-Token": process.env.API_TOKEN,
+        "X-Auth-Token": process.env.API_TOKEN as string,
       },
-    });
+    }
+  );
 
-    const tableData = response.data;
+  const tableData = response.data;
+  console.log(tableData);
 
-    return {
-      props: {
-        teams: tableData.standings[0].table,
-        competition: tableData.competition,
-        season: tableData.season,
-      },
-    };
-  } catch (error) {
-    console.error(error);
-
-    return {
-      props: {
-        teams: [],
-        competition: {},
-        season: {},
-      },
-    };
-  }
+  return {
+    props: {
+      teams: tableData.standings[0].table,
+      competition: tableData.competition,
+      season: tableData.season,
+    },
+  };
 };
 
 export default PremierRank;
