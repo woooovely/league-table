@@ -99,7 +99,7 @@ const PremierRank = ({ teams, competition, season }: TableDataProps) => {
 
 export const getServerSideProps = async () => {
   try {
-    const response = await axios.get("http://localhost:3000/api/pl/rank", {
+    const response = await axios.get("/api/pl/rank", {
       headers: {
         "X-Auth-Token": process.env.API_TOKEN,
       },
