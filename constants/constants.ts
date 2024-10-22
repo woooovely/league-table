@@ -178,7 +178,8 @@ export const seriePlayerName: TranslatedKoreanVer = {
     "Daniel Mosquera": "다니엘 모스케라",
     "Dušan Vlahović": "두샨 블라호비치",
     "Christian Pulisic": "크리스천 풀리식",
-    "Valentín Castellanos": "발렌틴 카스테야노스"
+    "Valentín Castellanos": "발렌틴 카스테야노스",
+    "Dany Mota Carvalho": "다니 모타"
 }
 
 export const leagueTeamName: TranslatedKoreanVer = {
