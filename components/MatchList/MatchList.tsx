@@ -19,7 +19,7 @@ import {
 import { plTeamsName } from "@/constants/constants";
 import Image from "next/image";
 import { format, toZonedTime } from "date-fns-tz";
-import { plShortTeamName } from "@/constants/short-name";
+import { shortTeamName } from "@/constants/short-name";
 
 interface MatchListProps {
   data: Matches[];
@@ -48,7 +48,7 @@ const MatchList = ({ data }: MatchListProps) => {
                 {item.status === "FINISHED" && <MatchType>경기 종료</MatchType>}
                 <HomeTeamContainer>
                   <HomeTeamName>
-                    {plShortTeamName[item.homeTeam.shortName]}
+                    {shortTeamName[item.homeTeam.shortName]}
                   </HomeTeamName>
                   <HomeTeamLogoContainer>
                     <Image
@@ -79,7 +79,7 @@ const MatchList = ({ data }: MatchListProps) => {
                   />
                 </AwayTeamLogoConatiner>
                 <AwayTeamName>
-                  {plShortTeamName[item.awayTeam.shortName]}
+                  {shortTeamName[item.awayTeam.shortName]}
                 </AwayTeamName>
               </AwayTeamContainer>
             </MatchContainer>

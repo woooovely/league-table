@@ -1,6 +1,7 @@
 type TranslatedKoreanVer = Record<string, string>;
 
-export const plShortTeamName: TranslatedKoreanVer = {
+export const shortTeamName: TranslatedKoreanVer = {
+    // 프리미어리그
     "Man City": "맨시티",
     "West Ham": "웨스트햄",
     "Tottenham": "토트넘",
@@ -20,5 +21,25 @@ export const plShortTeamName: TranslatedKoreanVer = {
     "Ipswich Town": "입스위치",
     "Leicester City": "레스터",
     "Southampton": "사우스햄튼",
-    "Everton": "에버튼"
+    "Everton": "에버튼",
+
+    // 분데스리가
+    "Union Berlin": "우니온 베를린",
+    "Bayern": "바이에른 뮌헨",
+    "Leverkusen": "레버쿠젠",
+    "Wolfsburg": "볼프스부르크",
+    "Freiburg": "프라이부르크",
+    "Dortmund": "도르트문트",
+    "Frankfurt": "프랑크푸르트",
+    "RB Leipzig": "라이프치히",
+    "Stuttgart": "슈투트가르트",
+    "Hoffenheim": "호펜하임",
+    "Augsburg": "아우크스부르크",
+    "M'gladbach": "묀헨글라트바흐",
+    "Mainz": "마인츠",
+    "Bochum": "보훔",
+    "Holstein Kiel": "홀슈타인 킬",
+    "Heidenheim": "하이덴하임",
+    "St. Pauli": "장크트파울리",
+    "Bremen": "베르더 브레멘",
 }

@@ -93,7 +93,6 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
     fetchMatches();
   }, [currentDate]);
 
-  console.log(matches);
 
   return (
     <Wrapper>
