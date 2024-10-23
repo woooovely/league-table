@@ -63,5 +63,27 @@ export const shortTeamName: TranslatedKoreanVer = {
     "Mallorca": "마요르카",
     "Celta": "셀타 비고",
     "Leganés": "레가네스",
-    "Sevilla FC": "세비야"
+    "Sevilla FC": "세비야",
+
+    // 세리에A
+    "Milan": "AC 밀란",
+    "Napoli": "나폴리",
+    "Inter": "인터 밀란",
+    "Verona": "엘라스 베로나",
+    "Fiorentina": "피오렌티나",
+    "Juventus": "유벤투스",
+    "Lecce": "레체",
+    "Atalanta": "아탈란타",
+    "Monza": "몬차",
+    "Venezia FC": "베네치아",
+    "Genoa": "제노아",
+    "Como": "코모",
+    "Roma": "AS 로마",
+    "Bologna": "볼로냐",
+    "Cagliari": "칼리아리",
+    "Torino": "토리노",
+    "Udinese": "우디세네",
+    "Lazio": "라치오",
+    "Empoli": "엠폴리",
+    "Parma": "파르마"
 }
