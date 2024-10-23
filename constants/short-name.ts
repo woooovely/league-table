@@ -85,5 +85,25 @@ export const shortTeamName: TranslatedKoreanVer = {
     "Udinese": "우디세네",
     "Lazio": "라치오",
     "Empoli": "엠폴리",
-    "Parma": "파르마"
+    "Parma": "파르마",
+
+    // 리그1
+    "Monaco": "AS 모나코",
+    "Marseille": "마르세유",
+    "Stade de Reims": "스타드 드 랭스",
+    "Brest": "브레스투아",
+    "Strasbourg": "스트라스부르",
+    "Stade Rennais": "스타드 렌",
+    "Angers SCO": "앙제",
+    "PSG": "PSG",
+    "Montpellier": "몽펠리에",
+    "Lille": "릴",
+    "Toulouse": "툴루즈",
+    "Saint-Étienne": "생테티엔",
+    "Nice": "니스",
+    "Le Havre": "르아브르",
+    "Nantes": "낭트",
+    "RC Lens": "랑스",
+    "Olympique Lyon": "리옹",
+    "Auxerre": "오세르"
 }
