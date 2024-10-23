@@ -48,7 +48,7 @@ const PremierRank = ({ teams, competition, season }: TableDataProps) => {
   return (
     <div>
       <Head>
-        <title>23-24 프리미어리그 순위</title>
+        <title>24-25 프리미어리그 순위</title>
       </Head>
       <MainHeader />
       <SubHeader league="premier" />
