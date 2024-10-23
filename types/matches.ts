@@ -1,15 +1,18 @@
 export interface Matches {
+    id: number;
     utcDate: string;
     matchday: number;
     homeTeam: TeamTypes;
     awayTeam: TeamTypes;
     score: Score;
     referees: RefereeInfo[]
+    status: string;
 }
 
 interface TeamTypes {
     id: number;
     name: string;
+    shortName: string;
     crest: string;
 }
 

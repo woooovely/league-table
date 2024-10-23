@@ -25,6 +25,11 @@ const SubHeader = ({ league }: SubHeaderProps) => {
               리그 소식
             </LinkStyle>
           </Categories>
+          <Categories>
+            <LinkStyle href={`/${league}/matches`} league={league}>
+              경기 일정
+            </LinkStyle>
+          </Categories>
         </CategoryContainer>
       </HeaderContainer>
     </>
