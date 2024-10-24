@@ -72,7 +72,9 @@ export const nationality: TranslatedKoreanVer = {
     "Georgia": "조지아",
     "Romania": "루마니아",
     "Canada": "캐나다",
-    "South Korea": "대한민국"
+    "South Korea": "대한민국",
+    "Slovenia": "슬로베니아",
+    "Turkey": "튀르키예"
 }
 
 export const bundesTeamName: TranslatedKoreanVer = {
@@ -253,4 +255,17 @@ export const championsTeamName: TranslatedKoreanVer = {
     'BSC Young Boys': '영 보이즈',
     'FC Red Bull Salzburg': '레드불 잘츠부르크',
     'ŠK Slovan Bratislava': '브라티슬라바'
+}
+
+export const championsPlayerName: TranslatedKoreanVer = {
+    'Harry Kane': '해리 케인',
+    'Raphinha': '하피냐',
+    'Jamie Bynoe-Gittens': '제이미 기튼스',
+    'Sehrou Guirassy': '세루 기라시',
+    'Florian Wirtz': '플로리안 비르츠',
+    'Muhammed Kerem Aktürkoğlu': '케렘 아크튀르크올루',
+    'Abdallah Sima': '압달라 시마',
+    'Benjamin Šeško': '베냐민 세슈코',
+    'Erling Haaland': '엘링 홀란드',
+    'Karim Adeyemi': '카림 아데예미',
 }
