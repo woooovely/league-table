@@ -17,6 +17,7 @@ import { ko } from "date-fns/locale";
 import { Matches } from "@/types/matches";
 import MatchList from "../MatchList/MatchList";
 import Loading from "../Loading/Loading";
+import { leagueType } from "@/types/league-type";
 
 interface LeagueTypeProps {
   league: string;
@@ -34,19 +35,6 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
   const [matches, setMatches] = useState<Matches[]>([]);
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  const leagueType =
-    league === "premier"
-      ? "PL"
-      : league === "bundes"
-      ? "BL1"
-      : league === "laliga"
-      ? "PD"
-      : league === "serie"
-      ? "SA"
-      : league === "league"
-      ? "FL1"
-      : "";
 
   const formattedDate = getDate(currentDate);
   const dateLabel = getDateDifference(currentDate);
@@ -74,9 +62,11 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
   useEffect(() => {
     const fetchMatches = async () => {
       setIsLoading(true);
+      const leagueCode = leagueType[league];
+
       await axios
         .post(`/api/matches`, {
-          leagueType,
+          leagueType: leagueCode,
           currentDate: formattedDate,
         })
         .then((response) => {

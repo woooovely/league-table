@@ -57,7 +57,7 @@ export const shortTeamName: TranslatedKoreanVer = {
     "Getafe": "헤타페",
     "Real Sociedad": "레알 소시에다드",
     "Villarreal": "비야레알",
-    "Deportivo": "데포르티보 알라베스",
+    "Alavés": "D.알라베스",
     "Espanyol": "에스파뇰",
     "Las Palmas": "라스팔마스",
     "Mallorca": "마요르카",

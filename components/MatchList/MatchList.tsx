@@ -16,7 +16,6 @@ import {
   Text,
   Wrapper,
 } from "./MatchList-style";
-import { plTeamsName } from "@/constants/constants";
 import Image from "next/image";
 import { format, toZonedTime } from "date-fns-tz";
 import { shortTeamName } from "@/constants/short-name";
