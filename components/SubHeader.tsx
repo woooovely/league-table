@@ -77,7 +77,9 @@ const HeaderContainer = styled.nav<SubHeaderProps>`
       ? "url('/laliga_header.svg')"
       : props.league === "serie"
       ? "url('/serie_header.svg')"
-      : "url('/league_header.svg')"};
+      : props.league === "league"
+      ? "url('/league_header.svg')"
+      : "url('/champions_header.svg')"};
   background-size: cover;
   display: flex;
   align-items: center;

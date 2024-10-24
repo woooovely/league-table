@@ -13,7 +13,7 @@ const MainHeader = () => {
           <Categories>
             <LinkStyle href="/premier/rank">프리미어리그</LinkStyle>
           </Categories>
-          <Categories> 
+          <Categories>
             <LinkStyle href="/bundes/rank">분데스리가</LinkStyle>
           </Categories>
           <Categories>
@@ -24,6 +24,9 @@ const MainHeader = () => {
           </Categories>
           <Categories>
             <LinkStyle href="/league/rank">리그1</LinkStyle>
+          </Categories>
+          <Categories>
+            <LinkStyle href="/champions/rank">챔피언스리그</LinkStyle>
           </Categories>
         </CategoryContainer>
       </HeaderContainer>
@@ -39,7 +42,7 @@ const HeaderContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: 1px solid #BEBCBC;
+  border-bottom: 1px solid #bebcbc;
 `;
 
 const LogoText = styled.h2`
@@ -58,6 +61,6 @@ const Categories = styled.li`
 `;
 
 const LinkStyle = styled(Link)`
-    color: black;
-    text-decoration: none;
-`
+  color: black;
+  text-decoration: none;
+`;

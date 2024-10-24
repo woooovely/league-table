@@ -4,37 +4,7 @@ import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
 import * as S from "@/styles/laliga/rank";
 import { laligaTeamName } from "@/constants/constants";
-
-interface CompetitonProps {
-  id: number;
-  name: string;
-  emblem: string;
-}
-
-interface SeasonProps {
-  id: number;
-  startDate: string;
-  endDate: string;
-}
-
-interface TeamProps {
-  id: number;
-  name: string;
-  shortName: string;
-  crest: string;
-}
-
-interface Team {
-  id: number;
-  position: number;
-  team: TeamProps;
-  playedGames: number;
-  won: number;
-  draw: number;
-  lost: number;
-  points: number;
-  goalDifference: number;
-}
+import { CompetitonProps, SeasonProps, Team } from "@/types/rank-table";
 
 interface TableDataProps {
   table: Team[];
