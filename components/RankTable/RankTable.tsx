@@ -23,6 +23,7 @@ import {
   plTeamsName,
   serieTeamName,
 } from "@/constants/constants";
+import { convertTeamName } from "@/utils/convert";
 
 interface TableDataProps {
   teams: Team[];
@@ -31,28 +32,6 @@ interface TableDataProps {
 }
 
 const RankTable = ({ teams, competition, season }: TableDataProps) => {
-  const convertTeamName = (teamName: string) => {
-    switch (competition.name) {
-      case "Premier League":
-        return plTeamsName[teamName];
-
-      case "Bundesliga":
-        return bundesTeamName[teamName];
-
-      case "Primera Division":
-        return laligaTeamName[teamName];
-
-      case "Serie A":
-        return serieTeamName[teamName];
-
-      case "Ligue 1":
-        return leagueTeamName[teamName];
-
-      default:
-        return championsTeamName[teamName];
-    }
-  };
-
   return (
     <Wrapper>
       <LogoContainer>
@@ -87,7 +66,9 @@ const RankTable = ({ teams, competition, season }: TableDataProps) => {
               </ListTd>
               <ListTd>
                 <TeamLogo src={item.team.crest} alt="팀 로고" />
-                <TeamName>{convertTeamName(item.team.name)}</TeamName>
+                <TeamName>
+                  {convertTeamName(competition.name, item.team.name)}
+                </TeamName>
               </ListTd>
               <ListTd>{item.playedGames}</ListTd>
               <ListTd>{item.won}</ListTd>

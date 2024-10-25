@@ -16,7 +16,12 @@ import {
   Wrapper,
 } from "./ScorerRank-style";
 import Image from "next/image";
-import { championsPlayerName, championsTeamName, nationality } from "@/constants/constants";
+import {
+  championsPlayerName,
+  championsTeamName,
+  nationality,
+} from "@/constants/constants";
+import { convertPlayerName, convertTeamName } from "@/utils/convert";
 
 interface ScorerDataProps {
   scorers: Scorer[];
@@ -47,12 +52,14 @@ const ScorerRank = ({ scorers, competition }: ScorerDataProps) => {
           <Container key={item.player.id}>
             <Table>
               <Rank>{index + 1}</Rank>
-              <Player>{championsPlayerName[item.player.name]}</Player>
+              <Player>
+                {convertPlayerName(competition.name, item.player.name)}
+              </Player>
               <PlayedMatches>{item.playedMatches}</PlayedMatches>
               <Goals>{item.goals}</Goals>
               <TeamContainer>
                 <TeamLogo src={item.team.crest} alt="팀 로고" />
-                {championsTeamName[item.team.name]}
+                {convertTeamName(competition.name, item.team.name)}
               </TeamContainer>
               <Nation>{nationality[item.player.nationality]}</Nation>
             </Table>
