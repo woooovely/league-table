@@ -10,14 +10,42 @@ import {
   Title,
   Wrapper,
 } from "./NewsTemplate-style";
-import thumbnail from "@/public/champions_thumbnail.png";
+import premierThumbnail from '@/public/premier_thumbnail.svg';
+import bundesThumbnail from '@/public/bundes_thumbnail.svg';
+import laligaThumbnail from '@/public/laliga_thumbnail.svg';
+import serieThumbnail from '@/public/serie_thumbnail.svg';
+import leagueThumbnail from '@/public/league_thumbnail.svg';
+import championsThumbnail from "@/public/champions_thumbnail.png";
 import cheerio from "cheerio";
 
 interface NewsProps {
   items: NewsDataTypes[];
+  league: string;
 }
 
-const NewsTemplate = ({ items }: NewsProps) => {
+const NewsTemplate = ({ items, league }: NewsProps) => {
+  const handleThumbnail = () => {
+    switch (league) {
+      case 'premier':
+        return premierThumbnail;
+
+      case 'bundes':
+        return bundesThumbnail;
+
+      case 'laliga':
+        return laligaThumbnail;
+
+      case 'serie':
+        return serieThumbnail;
+
+      case 'league':
+        return leagueThumbnail;
+
+      default:
+        return championsThumbnail;
+    }
+  }
+
   return (
     <Wrapper>
       <NewsContainer>
@@ -27,7 +55,7 @@ const NewsTemplate = ({ items }: NewsProps) => {
             <NewsLink href={data.originallink} key={index}>
               <Thumbnail>
                 <NewsImage
-                  src={thumbnail}
+                  src={handleThumbnail()}
                   alt="썸네일"
                   width={200}
                   height={200}

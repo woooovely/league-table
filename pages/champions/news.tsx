@@ -17,7 +17,7 @@ const ChampionsNews = ({ items }: NewsProps) => {
       </Head>
       <MainHeader />
       <SubHeader league="champions" />
-      <NewsTemplate items={items} />
+      <NewsTemplate items={items} league="champions" />
     </div>
   );
 };
