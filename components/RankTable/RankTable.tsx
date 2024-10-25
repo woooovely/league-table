@@ -45,7 +45,7 @@ const RankTable = ({ teams, competition, season }: TableDataProps) => {
       case "Serie A":
         return serieTeamName[teamName];
 
-      case "League 1":
+      case "Ligue 1":
         return leagueTeamName[teamName];
 
       default:
