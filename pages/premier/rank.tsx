@@ -5,39 +5,8 @@ import axios from "axios";
 import * as S from "@/styles/pl/rank";
 import { plTeamsName } from "@/constants/constants";
 import RankTable from "@/components/RankTable/RankTable";
-
-interface CompetitionProps {
-  id: number;
-  name: string;
-  code: string;
-  emblem: string;
-}
-
-interface SeasonProps {
-  id: number;
-  startDate: string;
-  endDate: string;
-}
-
-interface TeamProps {
-  id: number;
-  name: string;
-  shortName: string;
-  crest: string;
-}
-
-interface Team {
-  id: number;
-  competition: CompetitionProps;
-  team: TeamProps;
-  position: number;
-  playedGames: number;
-  won: number;
-  draw: number;
-  lost: number;
-  points: number;
-  goalDifference: number;
-}
+import { SeasonProps, Team } from "@/types/rank-table";
+import { CompetitionProps } from "@/types/scorer-type";
 
 interface TableDataProps {
   teams: Team[];
