@@ -5,16 +5,11 @@ import SubHeader from "@/components/SubHeader";
 import * as S from "@/styles/bundes/news";
 import thumbnail from "@/public/bundes_thumbnail.svg";
 import cheerio from "cheerio";
-
-interface News {
-  title: string;
-  originallink: string;
-  link: string;
-  description: string;
-}
+import { NewsDataTypes } from "@/types/news";
+import NewsTemplate from "@/components/NewsTemplate/NewsTemplate";
 
 interface NewsProps {
-  items: News[];
+  items: NewsDataTypes[];
 }
 
 const BundesNews = ({ items }: NewsProps) => {
@@ -25,24 +20,7 @@ const BundesNews = ({ items }: NewsProps) => {
       </Head>
       <MainHeader />
       <SubHeader league="bundes" />
-      <S.NewsContainer>
-        <S.Title>인기 급상승 뉴스</S.Title>
-        <S.NewsItemBlock>
-          {items.map((item: News, index: number) => (
-            <S.NewsLink href={item.originallink} key={index + 1}>
-              <S.Thumbnail>
-                <S.NewsImage src={thumbnail} alt="썸네일" />
-                <S.Detail>
-                  <S.NewsTitle>
-                    {cheerio.load(item.title).root().text()}
-                  </S.NewsTitle>
-                  {cheerio.load(item.description).root().text()}
-                </S.Detail>
-              </S.Thumbnail>
-            </S.NewsLink>
-          ))}
-        </S.NewsItemBlock>
-      </S.NewsContainer>
+      <NewsTemplate items={items} league="bundes" />
     </div>
   );
 };
