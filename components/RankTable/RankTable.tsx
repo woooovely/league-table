@@ -15,15 +15,44 @@ import {
   Wrapper,
 } from "./RankTable-style";
 import Image from "next/image";
-import { championsTeamName } from "@/constants/constants";
+import {
+  bundesTeamName,
+  championsTeamName,
+  laligaTeamName,
+  leagueTeamName,
+  plTeamsName,
+  serieTeamName,
+} from "@/constants/constants";
 
 interface TableDataProps {
-  table: Team[];
+  teams: Team[];
   competition: CompetitonProps;
   season: SeasonProps;
 }
 
-const RankTable = ({ table, competition, season }: TableDataProps) => {
+const RankTable = ({ teams, competition, season }: TableDataProps) => {
+  const convertTeamName = (teamName: string) => {
+    switch (competition.name) {
+      case "Premier League":
+        return plTeamsName[teamName];
+
+      case "Bundesliga":
+        return bundesTeamName[teamName];
+
+      case "Primera Division":
+        return laligaTeamName[teamName];
+
+      case "Serie A":
+        return serieTeamName[teamName];
+
+      case "League 1":
+        return leagueTeamName[teamName];
+
+      default:
+        return championsTeamName[teamName];
+    }
+  };
+
   return (
     <Wrapper>
       <LogoContainer>
@@ -51,14 +80,14 @@ const RankTable = ({ table, competition, season }: TableDataProps) => {
           </TableTr>
         </Head>
         <Body>
-          {table.map((item) => (
+          {teams.map((item) => (
             <ListTr key={item.id}>
               <ListTd>
                 <Rank>{item.position}</Rank>
               </ListTd>
               <ListTd>
                 <TeamLogo src={item.team.crest} alt="팀 로고" />
-                <TeamName>{championsTeamName[item.team.name]}</TeamName>
+                <TeamName>{convertTeamName(item.team.name)}</TeamName>
               </ListTd>
               <ListTd>{item.playedGames}</ListTd>
               <ListTd>{item.won}</ListTd>

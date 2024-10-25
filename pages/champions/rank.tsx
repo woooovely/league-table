@@ -6,12 +6,12 @@ import axios from "axios";
 import Head from "next/head";
 
 interface TableDataProps {
-  table: Team[];
+  teams: Team[];
   competition: CompetitonProps;
   season: SeasonProps;
 }
 
-const ChampionsRank = ({ table, competition, season }: TableDataProps) => {
+const ChampionsRank = ({ teams, competition, season }: TableDataProps) => {
   return (
     <div>
       <Head>
@@ -19,7 +19,7 @@ const ChampionsRank = ({ table, competition, season }: TableDataProps) => {
       </Head>
       <MainHeader />
       <SubHeader league="champions" />
-      <RankTable table={table} competition={competition} season={season} />
+      <RankTable teams={teams} competition={competition} season={season} />
     </div>
   );
 };
@@ -40,7 +40,7 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      table: data.standings[0].table,
+      teams: data.standings[0].table,
       competition: data.competition,
       season: data.season,
     },
