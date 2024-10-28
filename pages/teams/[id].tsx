@@ -1,8 +1,26 @@
+import MainHeader from "@/components/MainHeader";
+import detectLeague from "@/utils/detectLeague";
+import { TeamInformation } from "@/types/team-info";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
+import Head from "next/head";
+import { convertTeamName } from "@/utils/convert";
 
-const TeamInfo = () => {
-  return <div></div>;
+interface Props {
+  data: TeamInformation;
+}
+
+const TeamInfo = ({ data }: Props) => {
+    const league = detectLeague(data)[0].league;
+
+  return (
+    <div>
+      <Head>
+        <title>{convertTeamName(league, data.name)}</title>
+      </Head>
+      <MainHeader />
+    </div>
+  );
 };
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
@@ -20,9 +38,9 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
 
   return {
     props: {
-        
-    }
-  }
+      data,
+    },
+  };
 };
 
 export default TeamInfo;

@@ -17,8 +17,8 @@ import {
 } from "./ScorerRank-style";
 import Image from "next/image";
 import { nationality } from "@/constants/nationality";
-import { convertPlayerName, convertTeamName } from "@/utils/convert";
 import { Competition } from "@/types/competition";
+import { convertPlayerName, convertTeamName } from "@/utils/convert";
 
 interface ScorerDataProps {
   scorers: Scorer[];
