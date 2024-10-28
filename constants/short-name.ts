@@ -105,5 +105,21 @@ export const shortTeamName: TranslatedKoreanVer = {
     "Nantes": "낭트",
     "RC Lens": "랑스",
     "Olympique Lyon": "리옹",
-    "Auxerre": "오세르"
+    "Auxerre": "오세르",
+
+    // 챔피언스리그
+    "Sporting CP": "스포르팅",
+    "SL Benfica": "벤피카",
+    "Feyenoord": "페예노르트",
+    "Celtic": "셀틱",
+    "Sparta Praha": "S.프라하",
+    "Dinamo Zagreb": "D.자그레브",
+    "Club Brugge": "브뤼헤",
+    "PSV": "PSV",
+    "Shaktar": "샤흐타르",
+    "Sturm Graz": "슈투름 그라츠",
+    "Crvena Zvedza": "즈베즈다",
+    "Young Boys": "영 보이즈",
+    "RB Salzburg": "잘츠부르크",
+    "Sl. Bratislava": "브라티슬라바"
 }
