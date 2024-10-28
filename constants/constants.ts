@@ -142,9 +142,9 @@ export const laligaPlayerName: TranslatedKoreanVer = {
     "Raphinha": "하피냐",
     "Giovani Lo Celso": "지오바니 로 셀소",
     "Oihan Sancet": "오이안 산세트",
-    "Iago Aspas": "이아고 아스파스",
+    "Ante Budimir": "안테 부디미르",
     "Lamine Yamal": "라민 야말",
-    "Borja Iglesias": "보르하 이글레시아스"
+    "Dodi Lukebakio": "도디 루케바키오"
 }
 
 export const serieTeamName: TranslatedKoreanVer = {
