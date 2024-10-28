@@ -175,12 +175,12 @@ export const seriePlayerName: TranslatedKoreanVer = {
     "Marcus Thuram-Ulien": "마르쿠스 튀람",
     "Khvicha Kvaratskhelia": "흐비차 크바라츠헬리아",
     "Patrick Cutrone": "파트리크 쿠트로네",
-    "Dennis Man": "데니스 만",
+    "Lorenzo Lucca": "로렌초 루카",
     "Duván Zapata": "두반 사파타",
-    "Daniel Mosquera": "다니엘 모스케라",
+    "Moise Kean": "모이스 킨",
     "Dušan Vlahović": "두샨 블라호비치",
     "Christian Pulisic": "크리스천 풀리식",
-    "Valentín Castellanos": "발렌틴 카스테야노스",
+    "Ademola Lookman": "아데몰라 루크먼",
     "Dany Mota Carvalho": "다니 모타"
 }
 
@@ -215,7 +215,7 @@ export const leaguePlayerName: TranslatedKoreanVer = {
     "Luis Henrique": "루이스 엔리케",
     "Evann Guessand": "에반 게상",
     "Andrey Santos": "안드레이 산투스",
-    "Emanuel Emegha": "엠마누엘 에메가"
+    "Zuriko Davitashvili": "주리코 다비타슈빌리"
 }
 
 export const championsTeamName: TranslatedKoreanVer = {
