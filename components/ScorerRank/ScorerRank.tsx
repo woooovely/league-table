@@ -1,4 +1,4 @@
-import { CompetitionProps, Scorer } from "@/types/scorer-type";
+import { Scorer } from "@/types/scorer-type";
 import {
   BoxContainer,
   Container,
@@ -18,10 +18,11 @@ import {
 import Image from "next/image";
 import { nationality } from "@/constants/nationality";
 import { convertPlayerName, convertTeamName } from "@/utils/convert";
+import { Competition } from "@/types/competition";
 
 interface ScorerDataProps {
   scorers: Scorer[];
-  competition: CompetitionProps;
+  competition: Competition;
 }
 
 const ScorerRank = ({ scorers, competition }: ScorerDataProps) => {

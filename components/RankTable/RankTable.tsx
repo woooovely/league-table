@@ -1,4 +1,4 @@
-import { CompetitonProps, SeasonProps, Team } from "@/types/rank-table";
+import { SeasonProps, Team } from "@/types/rank-table";
 import {
   Body,
   Head,
@@ -16,10 +16,12 @@ import {
 } from "./RankTable-style";
 import Image from "next/image";
 import { convertTeamName } from "@/utils/convert";
+import Link from "next/link";
+import { Competition } from "@/types/competition";
 
 interface TableDataProps {
   teams: Team[];
-  competition: CompetitonProps;
+  competition: Competition;
   season: SeasonProps;
 }
 
@@ -59,7 +61,9 @@ const RankTable = ({ teams, competition, season }: TableDataProps) => {
               <ListTd>
                 <TeamLogo src={item.team.crest} alt="팀 로고" />
                 <TeamName>
-                  {convertTeamName(competition.name, item.team.name)}
+                  <Link href={`/teams/${item.team.id}`}>
+                    {convertTeamName(competition.name, item.team.name)}
+                  </Link>
                 </TeamName>
               </ListTd>
               <ListTd>{item.playedGames}</ListTd>
