@@ -32,7 +32,7 @@ export const plPlayerName: TranslatedKoreanVer = {
     "Nicolas Jackson": "니콜라스 잭슨",
     "Luis Díaz": "루이스 디아스",
     "Ollie Watkins": "올리 왓킨스",
-    "Kai Havertz": "카이 하베르츠",
+    "Liam Delap": "리암 델랍",
     "Chris Wood": "크리스 우드",
 }
 
