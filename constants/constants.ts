@@ -107,8 +107,8 @@ export const bundesPlayerName: TranslatedKoreanVer = {
     "Jonathan Burkardt": "요나탄 부르카르트",
     "Victor Boniface": "빅터 보니페이스",
     "Loïs Openda": "로이스 오펜다",
-    "Florian Wirtz": "플로리안 비르츠",
-    "Shuto Machino": "마치노 슈토"
+    "Deniz Undav": "데니스 운다브",
+    "Michael Olise": "마이클 올리세"
 }
 
 export const laligaTeamName: TranslatedKoreanVer = {
