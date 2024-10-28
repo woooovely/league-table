@@ -16,7 +16,7 @@ import laligaThumbnail from '@/public/laliga_thumbnail.svg';
 import serieThumbnail from '@/public/serie_thumbnail.svg';
 import leagueThumbnail from '@/public/league_thumbnail.svg';
 import championsThumbnail from "@/public/champions_thumbnail.png";
-import cheerio from "cheerio";
+import { load } from "cheerio";
 
 interface NewsProps {
   items: NewsDataTypes[];
@@ -62,9 +62,9 @@ const NewsTemplate = ({ items, league }: NewsProps) => {
                 />
                 <Detail>
                   <NewsTitle>
-                    {cheerio.load(data.title).root().text()}
+                    {load(data.title).root().text()}
                   </NewsTitle>
-                  {cheerio.load(data.description).root().text()}
+                  {load(data.description).root().text()}
                 </Detail>
               </Thumbnail>
             </NewsLink>
