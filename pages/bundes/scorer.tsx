@@ -20,7 +20,7 @@ const BundesScorer = ({ scorers, competition }: ScorerDataProps) => {
   return (
     <div>
       <Head>
-        <title>23-24 분데스리가 득점왕</title>
+        <title>24-25 분데스리가 득점왕</title>
       </Head>
       <MainHeader />
       <SubHeader league="bundes" />

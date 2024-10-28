@@ -20,7 +20,7 @@ const LaligaScorer = ({ scorers, competition }: ScorerProps) => {
   return (
     <div>
       <Head>
-        <title>23-24 라리가 득점왕</title>
+        <title>24-25 라리가 득점왕</title>
       </Head>
       <MainHeader />
       <SubHeader league="laliga" />

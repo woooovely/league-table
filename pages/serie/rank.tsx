@@ -18,7 +18,7 @@ const SerieRank = ({ teams, competition, season }: TableDataProps) => {
   return (
     <div>
       <Head>
-        <title>23-24 세리에A 순위</title>
+        <title>24-25 세리에A 순위</title>
       </Head>
       <MainHeader />
       <SubHeader league="serie" />

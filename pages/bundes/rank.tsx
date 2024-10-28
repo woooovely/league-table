@@ -18,7 +18,7 @@ const BundesRank = ({ teams, competition, season }: TableDataProps) => {
   return (
     <div>
       <Head>
-        <title>23-24 분데스리가 순위</title>
+        <title>24-25 분데스리가 순위</title>
       </Head>
       <MainHeader />
       <SubHeader league="bundes" />

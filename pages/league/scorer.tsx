@@ -14,7 +14,7 @@ const LeagueScorer = ({ scorers, competition }: ScorerProps) => {
   return (
     <div>
       <Head>
-        <title>23-24 리그1 득점왕</title>
+        <title>24-25 리그1 득점왕</title>
       </Head>
       <MainHeader />
       <SubHeader league="league" />

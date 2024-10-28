@@ -20,7 +20,7 @@ const SerieScorer = ({ scorers, competition }: ScorerProps) => {
   return (
     <div>
       <Head>
-        <title>23-24 세리에A 득점왕</title>
+        <title>24-25 세리에A 득점왕</title>
       </Head>
       <MainHeader />
       <SubHeader league="serie" />

@@ -15,7 +15,7 @@ const LaligaRank = ({ teams, competition, season }: TableDataProps) => {
   return (
     <div>
       <Head>
-        <title>23-24 라리가 순위</title>
+        <title>24-25 라리가 순위</title>
       </Head>
       <MainHeader />
       <SubHeader league="laliga" />
