@@ -2,12 +2,13 @@ import Head from "next/head";
 import axios from "axios";
 import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
-import { CompetitonProps, SeasonProps, Team } from "@/types/rank-table";
+import { SeasonProps, Team } from "@/types/rank-table";
 import RankTable from "@/components/RankTable/RankTable";
+import { Competition } from "@/types/competition";
 
 interface TableDataProps {
   teams: Team[];
-  competition: CompetitonProps;
+  competition: Competition;
   season: SeasonProps;
 }
 

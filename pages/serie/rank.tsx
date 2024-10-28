@@ -3,12 +3,12 @@ import axios from "axios";
 import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
 import { SeasonProps, Team } from "@/types/rank-table";
-import { CompetitionProps } from "@/types/scorer-type";
 import RankTable from "@/components/RankTable/RankTable";
+import { Competition } from "@/types/competition";
 
 interface TableDataProps {
   teams: Team[];
-  competition: CompetitionProps;
+  competition: Competition;
   season: SeasonProps;
 }
 

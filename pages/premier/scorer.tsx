@@ -2,12 +2,13 @@ import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
 import axios from "axios";
-import { CompetitionProps, Scorer } from "@/types/scorer-type";
+import { Scorer } from "@/types/scorer-type";
 import ScorerRank from "@/components/ScorerRank/ScorerRank";
+import { Competition } from "@/types/competition";
 
 interface ScorerDataProps {
   scorers: Scorer[];
-  competition: CompetitionProps;
+  competition: Competition;
 }
 
 const PremierScorer = ({ scorers, competition }: ScorerDataProps) => {

@@ -1,10 +1,3 @@
-export interface CompetitionProps {
-    id: number;
-    name: string;
-    code: string;
-    emblem: string;
-}
-
 export interface Scorer {
     player: Player;
     team: TeamInfo;

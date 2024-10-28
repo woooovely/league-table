@@ -1,9 +1,3 @@
-export interface CompetitonProps {
-    id: number;
-    name: string;
-    emblem: string;
-  }
-  
 export interface SeasonProps {
     id: number;
     startDate: string;
