@@ -1,4 +1,5 @@
-import { bundesPlayerName, bundesTeamName, championsPlayerName, championsTeamName, laligaPlayerName, laligaTeamName, leaguePlayerName, leagueTeamName, plPlayerName, plTeamsName, seriePlayerName, serieTeamName } from "@/constants/constants"
+import { bundesPlayerName, championsPlayerName, laligaPlayerName, leaguePlayerName, plPlayerName, seriePlayerName } from "@/constants/player-name";
+import { bundesTeamName, championsTeamName, laligaTeamName, leagueTeamName, plTeamsName, serieTeamName } from "@/constants/team-name";
 
 export const convertTeamName = (league: string, teamName: string) => {
     switch (league) {

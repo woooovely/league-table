@@ -15,14 +15,6 @@ import {
   Wrapper,
 } from "./RankTable-style";
 import Image from "next/image";
-import {
-  bundesTeamName,
-  championsTeamName,
-  laligaTeamName,
-  leagueTeamName,
-  plTeamsName,
-  serieTeamName,
-} from "@/constants/constants";
 import { convertTeamName } from "@/utils/convert";
 
 interface TableDataProps {

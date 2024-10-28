@@ -2,12 +2,6 @@ import Head from "next/head";
 import axios from "axios";
 import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
-import * as S from "@/styles/serie/scorer";
-import {
-  nationality,
-  seriePlayerName,
-  serieTeamName,
-} from "@/constants/constants";
 import { CompetitionProps, Scorer } from "@/types/scorer-type";
 import ScorerRank from "@/components/ScorerRank/ScorerRank";
 

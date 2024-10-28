@@ -16,11 +16,7 @@ import {
   Wrapper,
 } from "./ScorerRank-style";
 import Image from "next/image";
-import {
-  championsPlayerName,
-  championsTeamName,
-  nationality,
-} from "@/constants/constants";
+import { nationality } from "@/constants/nationality";
 import { convertPlayerName, convertTeamName } from "@/utils/convert";
 
 interface ScorerDataProps {

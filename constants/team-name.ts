@@ -1,4 +1,4 @@
-type TranslatedKoreanVer = Record<string, string>
+type TranslatedKoreanVer = Record<string, string>;
 
 export const plTeamsName: TranslatedKoreanVer = {
     "Manchester City FC": "맨체스터 시티",
@@ -23,60 +23,6 @@ export const plTeamsName: TranslatedKoreanVer = {
     "Everton FC": "에버튼"
 }
 
-export const plPlayerName: TranslatedKoreanVer = {
-    "Erling Haaland": "엘링 홀란",
-    "Mohamed Salah": "모하메드 살라",
-    "Cole Palmer": "콜 파머",
-    "Bryan Mbeumo": "브라이언 음뵈모",
-    "Danny Welbeck": "대니 웰벡",
-    "Nicolas Jackson": "니콜라스 잭슨",
-    "Luis Díaz": "루이스 디아스",
-    "Ollie Watkins": "올리 왓킨스",
-    "Liam Delap": "리암 델랍",
-    "Chris Wood": "크리스 우드",
-}
-
-export const nationality: TranslatedKoreanVer = {
-    "Norway": "노르웨이",
-    "Nigeria": "나이지리아",
-    "England": "잉글랜드",
-    "Cameroon": "카메룬",
-    "Spain": "스페인",
-    "France": "프랑스",
-    "Sweden": "스웨덴",
-    "Denmark": "덴마크",
-    "Germany": "독일",
-    "Guinea": "기니",
-    "Belgium": "벨기에",
-    "Czech Republic": "체코",
-    "DR Congo": "콩고민주공화국",
-    "Brazil": "브라질",
-    "Netherlands": "네덜란드",
-    "Venezuela": "베네수엘라",
-    "Uruguay": "우루과이",
-    "Argentina": "아르헨티나",
-    "Morocco": "모로코",
-    "Italy": "이탈리아",
-    "Serbia": "세르비아",
-    "USA": "미국",
-    "Egypt": "이집트",
-    "Jordan": "요르단",
-    "Japan": "일본",
-    "Portugal": "포르투갈",
-    "Colombia": "콜롬비아",
-    "New Zealand": "뉴질랜드",
-    "Senegal": "세네갈",
-    "Bosnia-Herzegovina": "보스니아-헤르체고비나",
-    "Croatia": "크로아티아",
-    "Poland": "폴란드",
-    "Georgia": "조지아",
-    "Romania": "루마니아",
-    "Canada": "캐나다",
-    "South Korea": "대한민국",
-    "Slovenia": "슬로베니아",
-    "Turkey": "튀르키예"
-}
-
 export const bundesTeamName: TranslatedKoreanVer = {
     "1. FC Union Berlin": "우니온 베를린",
     "FC Bayern München": "바이에른 뮌헨",
@@ -96,19 +42,6 @@ export const bundesTeamName: TranslatedKoreanVer = {
     "1. FC Heidenheim 1846": "하이덴하임",
     "FC St. Pauli 1910": "FC 장크트파울리",
     "SV Werder Bremen": "베르더 브레멘",
-}
-
-export const bundesPlayerName: TranslatedKoreanVer = {
-    "Omar Marmoush": "오마르 마르무시",
-    "Tim Kleindienst": "팀 클라인딘스트",
-    "Harry Kane": "해리 케인",
-    "Andrej Kramarić": "안드레이 크라마리치",
-    "Ermedin Demirovic": "에르메딘 데미로비치",
-    "Jonathan Burkardt": "요나탄 부르카르트",
-    "Victor Boniface": "빅터 보니페이스",
-    "Loïs Openda": "로이스 오펜다",
-    "Deniz Undav": "데니스 운다브",
-    "Michael Olise": "마이클 올리세"
 }
 
 export const laligaTeamName: TranslatedKoreanVer = {
@@ -134,19 +67,6 @@ export const laligaTeamName: TranslatedKoreanVer = {
     "Sevilla FC": "세비야"
 }
 
-export const laligaPlayerName: TranslatedKoreanVer = {
-    "Robert Lewandowski": "로베르트 레반도프스키",
-    "Ayoze Pérez": "아요세 페레스",
-    "Kylian Mbappé": "킬리안 음바페",
-    "Vinicius Junior": "비니시우스 주니어",
-    "Raphinha": "하피냐",
-    "Giovani Lo Celso": "지오바니 로 셀소",
-    "Oihan Sancet": "오이안 산세트",
-    "Ante Budimir": "안테 부디미르",
-    "Lamine Yamal": "라민 야말",
-    "Dodi Lukebakio": "도디 루케바키오"
-}
-
 export const serieTeamName: TranslatedKoreanVer = {
     "AC Milan": "AC 밀란",
     "SSC Napoli": "SSC 나폴리",
@@ -170,20 +90,6 @@ export const serieTeamName: TranslatedKoreanVer = {
     "Parma Calcio 1913": "파르마 칼초"
 }
 
-export const seriePlayerName: TranslatedKoreanVer = {
-    "Mateo Retegui": "마테오 레테기",
-    "Marcus Thuram-Ulien": "마르쿠스 튀람",
-    "Khvicha Kvaratskhelia": "흐비차 크바라츠헬리아",
-    "Patrick Cutrone": "파트리크 쿠트로네",
-    "Lorenzo Lucca": "로렌초 루카",
-    "Duván Zapata": "두반 사파타",
-    "Moise Kean": "모이스 킨",
-    "Dušan Vlahović": "두샨 블라호비치",
-    "Christian Pulisic": "크리스천 풀리식",
-    "Ademola Lookman": "아데몰라 루크먼",
-    "Dany Mota Carvalho": "다니 모타"
-}
-
 export const leagueTeamName: TranslatedKoreanVer = {
     "AS Monaco FC": "AS 모나코",
     "Olympique de Marseille": "올림피크 마르세유",
@@ -203,19 +109,6 @@ export const leagueTeamName: TranslatedKoreanVer = {
     "Racing Club de Lens": "RC 랑스",
     "Olympique Lyonnais": "올림피크 리옹",
     "AJ Auxerre": "AJ 오세르"
-}
-
-export const leaguePlayerName: TranslatedKoreanVer = {
-    "Bradley Barcola": "브래들리 바르콜라",
-    "Mason Greenwood": "메이슨 그린우드",
-    "Jonathan David": "조너선 데이비드",
-    "Keito Nakamura": "나카무라 케이토",
-    "Kang-in Lee": "이강인",
-    "Ousmane Dembélé": "우스만 뎀벨레",
-    "Luis Henrique": "루이스 엔리케",
-    "Evann Guessand": "에반 게상",
-    "Andrey Santos": "안드레이 산투스",
-    "Zuriko Davitashvili": "주리코 다비타슈빌리"
 }
 
 export const championsTeamName: TranslatedKoreanVer = {
@@ -255,17 +148,4 @@ export const championsTeamName: TranslatedKoreanVer = {
     'BSC Young Boys': '영 보이즈',
     'FC Red Bull Salzburg': '레드불 잘츠부르크',
     'ŠK Slovan Bratislava': '브라티슬라바'
-}
-
-export const championsPlayerName: TranslatedKoreanVer = {
-    'Harry Kane': '해리 케인',
-    'Raphinha': '하피냐',
-    'Jamie Bynoe-Gittens': '제이미 기튼스',
-    'Sehrou Guirassy': '세루 기라시',
-    'Florian Wirtz': '플로리안 비르츠',
-    'Muhammed Kerem Aktürkoğlu': '케렘 아크튀르크올루',
-    'Abdallah Sima': '압달라 시마',
-    'Benjamin Šeško': '베냐민 세슈코',
-    'Erling Haaland': '엘링 홀란드',
-    'Karim Adeyemi': '카림 아데예미',
 }

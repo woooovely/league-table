@@ -2,8 +2,6 @@ import Head from "next/head";
 import axios from "axios";
 import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
-import * as S from "@/styles/bundes/rank";
-import { bundesTeamName } from "@/constants/constants";
 import RankTable from "@/components/RankTable/RankTable";
 import { SeasonProps, Team } from "@/types/rank-table";
 import { CompetitionProps } from "@/types/scorer-type";

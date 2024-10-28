@@ -2,40 +2,9 @@ import Head from "next/head";
 import axios from "axios";
 import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
-import * as S from "@/styles/league/rank";
-import { leagueTeamName } from "@/constants/constants";
 import RankTable from "@/components/RankTable/RankTable";
-
-interface CompetitionProps {
-  id: number;
-  name: string;
-  emblem: string;
-}
-
-interface SeasonProps {
-  id: number;
-  startDate: string;
-  endDate: string;
-}
-
-interface TeamProps {
-  id: number;
-  name: string;
-  shortName: string;
-  crest: string;
-}
-
-interface Team {
-  id: number;
-  position: number;
-  team: TeamProps;
-  playedGames: number;
-  won: number;
-  draw: number;
-  lost: number;
-  points: number;
-  goalDifference: number;
-}
+import { SeasonProps, Team } from "@/types/rank-table";
+import { CompetitionProps } from "@/types/scorer-type";
 
 interface TableDataProps {
   teams: Team[];
