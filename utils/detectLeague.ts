@@ -1,16 +1,17 @@
 import { TeamInformation } from "@/types/team-info";
 
 const leagues = [
-    "Premier League",
-    "Bundesliga",
-    "Primera Division",
-    "Serie A",
-    "Ligue 1",
+    "PL",
+    "BL1",
+    "PD",
+    "SA",
+    "FL1",
+    "CL"
 ];
 
 const detectLeague = (data: TeamInformation) => {
     const teamCompetitions = data.runningCompetitions
-    .filter((competition) => leagues.includes(competition.name))
+    .filter((competition) => leagues.includes(competition.code))
     .map((competition) => ({
       name: data.name,
       league: competition.name,
