@@ -61,7 +61,7 @@ const RankTable = ({ teams, competition, season }: TableDataProps) => {
               <ListTd>
                 <TeamLogo src={item.team.crest} alt="팀 로고" />
                 <TeamName>
-                  <Link href={`/teams/${item.team.id}`}>
+                  <Link href={`/teams/${item.team.id}/overview`}>
                     {convertTeamName(competition.name, item.team.name)}
                   </Link>
                 </TeamName>
