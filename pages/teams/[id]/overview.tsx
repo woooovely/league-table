@@ -5,13 +5,14 @@ import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import Head from "next/head";
 import { convertTeamName } from "@/utils/convert";
+import TeamDetailCard from "@/components/TeamDetailCard/TeamDetailCard";
 
 interface Props {
   data: TeamInformation;
 }
 
 const TeamInfo = ({ data }: Props) => {
-    const league = detectLeague(data)[0].league;
+  const league = detectLeague(data)[0].league;
 
   return (
     <div>
@@ -19,6 +20,7 @@ const TeamInfo = ({ data }: Props) => {
         <title>{convertTeamName(league, data.name)}</title>
       </Head>
       <MainHeader />
+      <TeamDetailCard data={data} league={league} />
     </div>
   );
 };
