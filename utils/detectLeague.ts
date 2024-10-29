@@ -2,7 +2,7 @@ import { TeamInformation } from "@/types/team-info";
 
 const leagues = [
     "Premier League",
-    "BundesLiga",
+    "Bundesliga",
     "Primera Division",
     "Serie A",
     "Ligue 1",
