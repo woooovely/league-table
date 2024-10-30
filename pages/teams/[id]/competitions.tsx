@@ -6,6 +6,7 @@ import { GetServerSidePropsContext } from "next";
 import Head from "next/head";
 import { convertTeamName } from "@/utils/convert";
 import TeamDetailCard from "@/components/TeamDetailCard/TeamDetailCard";
+import CompetitionsCard from "@/components/CompetitionsCard/CompetitionsCard";
 
 interface Props {
   data: TeamInformation;
@@ -21,6 +22,7 @@ const TeamCompetitions = ({ data }: Props) => {
       </Head>
       <MainHeader />
       <TeamDetailCard data={data} league={league} />
+      <CompetitionsCard data={data} />
     </div>
   );
 };

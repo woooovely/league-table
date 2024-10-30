@@ -15,8 +15,6 @@ interface Props {
 const TeamInfo = ({ data }: Props) => {
   const league = detectLeague(data)[0].league;
 
-  console.log(league);
-
   return (
     <div>
       <Head>
