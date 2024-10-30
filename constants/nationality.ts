@@ -38,5 +38,13 @@ export const nationality: TranslatedKoreanVer = {
     "Canada": "캐나다",
     "South Korea": "대한민국",
     "Slovenia": "슬로베니아",
-    "Turkey": "튀르키예"
+    "Turkey": "튀르키예",
+    "Australia": "호주",
+    "Wales": "웨일스",
+    "Austria": "오스트리아",
+    "Northern Ireland": "북아일랜드",
+    "Scotland": "스코틀랜드",
+    "Switzerland": "스위스",
+    "Chile": "칠레",
+    "Slovakia": "슬로바키아"
 }
