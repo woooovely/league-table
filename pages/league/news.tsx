@@ -2,9 +2,6 @@ import Head from "next/head";
 import axios from "axios";
 import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
-import * as S from "@/styles/league/news";
-import cheerio from "cheerio";
-import thumbnail from "@/public/league_thumbnail.svg";
 import NewsTemplate from "@/components/NewsTemplate/NewsTemplate";
 
 interface News {
