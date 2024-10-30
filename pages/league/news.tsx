@@ -5,6 +5,7 @@ import SubHeader from "@/components/SubHeader";
 import * as S from "@/styles/league/news";
 import cheerio from "cheerio";
 import thumbnail from "@/public/league_thumbnail.svg";
+import NewsTemplate from "@/components/NewsTemplate/NewsTemplate";
 
 interface News {
   title: string;
@@ -25,24 +26,7 @@ const LeagueNews = ({ items }: NewsProps) => {
       </Head>
       <MainHeader />
       <SubHeader league="league" />
-      <S.NewsContainer>
-        <S.Title>인기 급상승 뉴스</S.Title>
-        <S.NewsItemBlock>
-          {items.map((data: News, index: number) => (
-            <S.NewsLink href={data.originallink} key={index + 1}>
-              <S.Thumbnail>
-                <S.NewsImage src={thumbnail} alt="썸네일" />
-                <S.Detail>
-                  <S.NewsTitle>
-                    {cheerio.load(data.title).root().text()}
-                  </S.NewsTitle>
-                  {cheerio.load(data.description).root().text()}
-                </S.Detail>
-              </S.Thumbnail>
-            </S.NewsLink>
-          ))}
-        </S.NewsItemBlock>
-      </S.NewsContainer>
+      <NewsTemplate items={items} league="league" />
     </div>
   );
 };
