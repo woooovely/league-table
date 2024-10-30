@@ -19,6 +19,7 @@ import Image from "next/image";
 import { nationality } from "@/constants/nationality";
 import { Competition } from "@/types/competition";
 import { convertPlayerName, convertTeamName } from "@/utils/convert";
+import Link from "next/link";
 
 interface ScorerDataProps {
   scorers: Scorer[];
@@ -56,7 +57,9 @@ const ScorerRank = ({ scorers, competition }: ScorerDataProps) => {
               <Goals>{item.goals}</Goals>
               <TeamContainer>
                 <TeamLogo src={item.team.crest} alt="팀 로고" />
-                {convertTeamName(competition.name, item.team.name)}
+                <Link href={`/teams/${item.team.id}/overview`}>
+                  {convertTeamName(competition.name, item.team.name)}
+                </Link>
               </TeamContainer>
               <Nation>{nationality[item.player.nationality]}</Nation>
             </Table>
