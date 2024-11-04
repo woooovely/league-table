@@ -18,7 +18,6 @@ import {
   Wrapper,
 } from "./MatchList-style";
 import Image from "next/image";
-import { format, toZonedTime } from "date-fns-tz";
 import { shortTeamName } from "@/constants/short-name";
 
 interface MatchListProps {
