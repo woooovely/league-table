@@ -2,9 +2,6 @@ import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
 import axios from "axios";
-import * as S from "@/styles/pl/news";
-import thumbnail from "@/public/premier_thumbnail.svg";
-import cheerio from "cheerio";
 import { NewsDataTypes } from "@/types/news";
 import NewsTemplate from "@/components/NewsTemplate/NewsTemplate";
 

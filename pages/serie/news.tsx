@@ -2,9 +2,7 @@ import Head from "next/head";
 import axios from "axios";
 import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
-import * as S from '@/styles/serie/news';
-import thumbnail from '@/public/serie_thumbnail.svg';
-import cheerio from 'cheerio';
+import NewsTemplate from "@/components/NewsTemplate/NewsTemplate";
 
 interface News {
     title: string;
@@ -25,24 +23,7 @@ const SerieNews = ({ items }: NewsProps) => {
       </Head>
       <MainHeader />
       <SubHeader league="serie" />
-      <S.NewsContainer>
-        <S.Title>인기 급상승 뉴스</S.Title>
-        <S.NewsItemBlock>
-            {items.map((data: News, index: number) => (
-                <S.NewsLink href={data.originallink} key={index + 1}>
-                    <S.Thumbnail>
-                        <S.NewsImage src={thumbnail} alt="썸네일" />
-                        <S.Detail>
-                            <S.NewsTitle>
-                                {cheerio.load(data.title).root().text()}
-                            </S.NewsTitle>
-                            {cheerio.load(data.description).root().text()}
-                        </S.Detail>
-                    </S.Thumbnail>
-                </S.NewsLink>
-            ))}
-        </S.NewsItemBlock>
-      </S.NewsContainer>
+      <NewsTemplate league="serie" items={items} />
     </div>
   );
 };
