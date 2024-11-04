@@ -33,7 +33,7 @@ export const laligaPlayerName: TranslatedKoreanVer = {
     "Vinicius Junior": "비니시우스 주니어",
     "Raphinha": "하피냐",
     "Giovani Lo Celso": "지오바니 로 셀소",
-    "Oihan Sancet": "오이안 산세트",
+    "Dani Olmo": "다니 올모",
     "Ante Budimir": "안테 부디미르",
     "Lamine Yamal": "라민 야말",
     "Dodi Lukebakio": "도디 루케바키오"
@@ -43,14 +43,13 @@ export const seriePlayerName: TranslatedKoreanVer = {
     "Mateo Retegui": "마테오 레테기",
     "Marcus Thuram-Ulien": "마르쿠스 튀람",
     "Khvicha Kvaratskhelia": "흐비차 크바라츠헬리아",
-    "Patrick Cutrone": "파트리크 쿠트로네",
-    "Lorenzo Lucca": "로렌초 루카",
-    "Duván Zapata": "두반 사파타",
+    "Valentín Castellanos": "발렌틴 카스테야노스",
+    "Lautaro Martínez": "라우타로 마르티네스",
+    "Riccardo Orsolini": "리카르도 오솔리니",
     "Moise Kean": "모이스 킨",
     "Dušan Vlahović": "두샨 블라호비치",
     "Christian Pulisic": "크리스천 풀리식",
     "Ademola Lookman": "아데몰라 루크먼",
-    "Dany Mota Carvalho": "다니 모타"
 }
 
 export const leaguePlayerName: TranslatedKoreanVer = {
