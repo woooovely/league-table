@@ -108,5 +108,6 @@ export const coachName: Record<string, string> = {
     "Vladan Milojević": "블라단 밀로예비치",
     "Joël Magnin": "조엘 마냉",
     "Pepijn Lijnders": "펩 레인더스",
-    "Vladimir Weiss": "블라디미르 바이스"
+    "Vladimir Weiss": "블라디미르 바이스",
+    "João Pereira": "주앙 페레이라"
 }
