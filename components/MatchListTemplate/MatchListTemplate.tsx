@@ -24,7 +24,11 @@ interface LeagueTypeProps {
 }
 
 const MatchListTemplate = ({ league }: LeagueTypeProps) => {
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState(() => {
+    const date = new Date();
+    date.setHours(0, 0, 0, 0);
+    return date;
+  });
   const [leagueInfo, setLeagueInfo] = useState<LeagueInfo>({
     emblem: "",
     id: 0,
@@ -47,6 +51,7 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
     setCurrentDate((prevDate) => {
       const newDate = new Date(prevDate);
       newDate.setDate(newDate.getDate() - 1);
+      newDate.setHours(0, 0, 0, 0);
       return newDate;
     });
   };
@@ -55,6 +60,7 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
     setCurrentDate((prevDate) => {
       const newDate = new Date(prevDate);
       newDate.setDate(newDate.getDate() + 1);
+      newDate.setHours(0, 0, 0, 0);
       return newDate;
     });
   };
@@ -64,10 +70,15 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
       setIsLoading(true);
       const leagueCode = leagueType[league];
 
+      const utcDate = new Date(
+        currentDate.getTime() + currentDate.getTimezoneOffset() * 60000
+      );
+      console.log(utcDate);
+
       await axios
         .post(`/api/matches`, {
           leagueType: leagueCode,
-          currentDate: formattedDate,
+          currentDate: formattedDate
         })
         .then((response) => {
           setLeagueInfo(response.data.competition);
@@ -82,7 +93,6 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
 
     fetchMatches();
   }, [currentDate]);
-
 
   return (
     <Wrapper>

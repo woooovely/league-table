@@ -7,6 +7,7 @@ import {
   HomeTeamContainer,
   HomeTeamLogoContainer,
   HomeTeamName,
+  InfoText,
   MatchContainer,
   MatchesContainer,
   MatchTime,
@@ -25,20 +26,10 @@ interface MatchListProps {
 }
 
 const MatchList = ({ data }: MatchListProps) => {
-  const convertToKoreaTime = (utcDate: string) => {
-    const utc = utcDate;
-    const timeZone = "Asia/Seoul";
-
-    const zonedDate = toZonedTime(utc, timeZone);
-    const formattedDate = format(zonedDate, "yyyy-MM-dd HH:mm:ss", {
-      timeZone,
-    });
-
-    return formattedDate;
-  };
 
   return (
     <Wrapper>
+      <InfoText>*현지시간 기준</InfoText>
       {data.length > 0 ? (
         <MatchesContainer>
           {data.map((item) => (
@@ -65,7 +56,7 @@ const MatchList = ({ data }: MatchListProps) => {
                 </ScoreContainer>
               ) : (
                 <MatchTime>
-                  {convertToKoreaTime(item.utcDate).slice(11, 16)}
+                  {item.utcDate.slice(11, 16)}
                 </MatchTime>
               )}
               <AwayTeamContainer>

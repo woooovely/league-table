@@ -3,13 +3,15 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 `;
 
 export const MatchesContainer = styled.div`
   border-radius: 16px;
   border: 1px solid #dfdfdf;
   padding: 10px;
-  margin-top: 40px;
 `;
 
 export const MatchContainer = styled.div`
@@ -81,4 +83,8 @@ export const Text = styled.p`
 
 export const MatchType = styled.span`
     font-size: 14px;
+`
+
+export const InfoText = styled.p`
+  font-size: 12px;
 `
