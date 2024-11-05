@@ -23,10 +23,6 @@ interface Props {
 }
 
 const PlayerCard = ({ data }: Props) => {
-  const colors = data.currentTeam.clubColors
-    .split("/")
-    .map((color) => formatColor(color));
-
   const getAge = (birthDate: string) => {
     const date = new Date();
     const birthYear = birthDate.slice(0, 4);
