@@ -15,7 +15,6 @@ import {
   Wrapper,
 } from "./PlayerCard-style";
 import Image from "next/image";
-import formatColor from "@/utils/formatColor";
 import { nationality } from "@/constants/nationality";
 
 interface Props {
