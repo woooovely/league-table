@@ -18,7 +18,6 @@ import Image from "next/image";
 import { convertTeamName } from "@/utils/convert";
 import Link from "next/link";
 import { Competition } from "@/types/competition";
-import { useMemo } from "react";
 
 interface TableDataProps {
   teams: Team[];
