@@ -9,5 +9,6 @@ export const playerPosition: Record<string, string> = {
     'Attacking Midfield': '공격형 미드필더',
     'Left Winger': '윙어(왼쪽)',
     'Right Winger': '윙어(오른쪽)',
-    'Centre-Forward': '스트라이커'
+    'Centre-Forward': '스트라이커',
+    'Offence': '공격수'
 }
