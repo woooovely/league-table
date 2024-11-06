@@ -54,9 +54,7 @@ const MatchList = ({ data }: MatchListProps) => {
                   <Scored>{`${item.score.fullTime.home} - ${item.score.fullTime.away}`}</Scored>
                 </ScoreContainer>
               ) : (
-                <MatchTime>
-                  {item.utcDate.slice(11, 16)}
-                </MatchTime>
+                <MatchTime>{item.utcDate.slice(11, 16)}</MatchTime>
               )}
               <AwayTeamContainer>
                 <AwayTeamLogoConatiner>
