@@ -51,7 +51,9 @@ const ScorerRank = ({ scorers, competition }: ScorerDataProps) => {
             <Table>
               <Rank>{index + 1}</Rank>
               <Player>
-                {convertPlayerName(competition.name, item.player.name)}
+                <Link href={`/players/${item.player.id}`}>
+                  {convertPlayerName(competition.name, item.player.name)}
+                </Link>
               </Player>
               <PlayedMatches>{item.playedMatches}</PlayedMatches>
               <Goals>{item.goals}</Goals>
