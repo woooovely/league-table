@@ -10,5 +10,6 @@ export const playerPosition: Record<string, string> = {
     'Left Winger': '윙어(왼쪽)',
     'Right Winger': '윙어(오른쪽)',
     'Centre-Forward': '스트라이커',
-    'Offence': '공격수'
+    'Offence': '공격수',
+    "Defence": "수비수"
 }
