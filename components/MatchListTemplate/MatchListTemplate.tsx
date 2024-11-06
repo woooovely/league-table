@@ -7,7 +7,7 @@ import {
   PrevDateBtn,
   Wrapper,
 } from "./MatchListTemplate-style";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { LeagueInfo } from "@/types/league-info";
 import Image from "next/image";
@@ -36,8 +36,12 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const formattedDate = getDate(currentDate);
-  const dateLabel = getDateDifference(currentDate);
+  const formattedDate = useMemo(() => getDate(currentDate), [currentDate]);
+  const dateLabel = useMemo(
+    () => getDateDifference(currentDate),
+    [currentDate]
+  );
+
   const displayDate =
     dateLabel === "오늘" || dateLabel === "내일" || dateLabel === "어제"
       ? dateLabel
@@ -59,34 +63,28 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
     });
   };
 
+  const fetchMatches = useCallback(async () => {
+    setIsLoading(true);
+    const leagueCode = leagueType[league];
+
+    await axios
+      .post(`/api/matches`, {
+        leagueType: leagueCode,
+        currentDate: formattedDate,
+      })
+      .then((response) => {
+        setLeagueInfo(response.data.competition);
+        setMatches(response.data.matches);
+      })
+      .catch((error) => console.log(error))
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, [currentDate, league, formattedDate]);
+
   useEffect(() => {
-    const fetchMatches = async () => {
-      setIsLoading(true);
-      const leagueCode = leagueType[league];
-
-      const utcDate = new Date(
-        currentDate.getTime() + currentDate.getTimezoneOffset() * 60000
-      );
-      console.log(utcDate);
-
-      await axios
-        .post(`/api/matches`, {
-          leagueType: leagueCode,
-          currentDate: formattedDate
-        })
-        .then((response) => {
-          setLeagueInfo(response.data.competition);
-          setMatches(response.data.matches);
-          console.log(response.data.matches);
-        })
-        .catch((error) => console.log(error))
-        .finally(() => {
-          setIsLoading(false);
-        });
-    };
-
     fetchMatches();
-  }, [currentDate]);
+  }, [fetchMatches]);
 
   return (
     <Wrapper>
