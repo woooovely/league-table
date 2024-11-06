@@ -16,6 +16,7 @@ import {
 } from "./PlayerCard-style";
 import Image from "next/image";
 import { nationality } from "@/constants/nationality";
+import { playerPosition } from "@/constants/player-position";
 
 interface Props {
   data: Player;
@@ -71,6 +72,14 @@ const PlayerCard = ({ data }: Props) => {
                 <PlayerBioStatValue>{data.shirtNumber}</PlayerBioStatValue>
                 <PlayerBioStatTitle>
                   <span>등번호</span>
+                </PlayerBioStatTitle>
+              </PlayerBioStat>
+              <PlayerBioStat>
+                <PlayerBioStatValue>
+                  {playerPosition[data.section]}
+                </PlayerBioStatValue>
+                <PlayerBioStatTitle>
+                  <span>포지션</span>
                 </PlayerBioStatTitle>
               </PlayerBioStat>
             </PlayerBio>
