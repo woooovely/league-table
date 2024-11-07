@@ -23,8 +23,8 @@ const CoachCard = ({ data }: Props) => {
         <CoachHeader>감독</CoachHeader>
         <CoachDetail>
           <CoachName>{coachName[data.name]}</CoachName>
-          <Nationality>{nationality[data.nationality]}</Nationality>
-          <Period>{`${data.contract.start} ~ ${data.contract.until}`}</Period>
+          <span>{nationality[data.nationality]}</span>
+          <span>{`${data.contract.start} ~ ${data.contract.until}`}</span>
         </CoachDetail>
       </CoachContainer>
     </Wrapper>
