@@ -72,7 +72,7 @@ export const championsPlayerName: TranslatedKoreanVer = {
     'Sehrou Guirassy': '세루 기라시',
     'Florian Wirtz': '플로리안 비르츠',
     'Muhammed Kerem Aktürkoğlu': '케렘 아크튀르크올루',
-    'Abdallah Sima': '압달라 시마',
+    'Robert Lewandowski': '로베르트 레반도프스키',
     'Viktor Gyökeres': '빅토르 요케레스',
     'Jonathan David': '조너선 데이비드',
     'Vinicius Junior': '비니시우스 주니어',
