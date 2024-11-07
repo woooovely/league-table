@@ -22,16 +22,10 @@ export const CoachHeader = styled.h3`
 export const CoachDetail = styled.div`
     display: flex;
     flex-direction: column;
+    color: gray;
 `
 
 export const CoachName = styled.span`
   font-size: 24px;
-`
-
-export const Nationality = styled.span`
-    color: gray;
-`;
-
-export const Period = styled.span`
-    color: gray;
+  color: black;
 `
