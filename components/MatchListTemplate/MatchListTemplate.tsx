@@ -4,8 +4,8 @@ import {
   DateBoxContainer,
   LeagueLogoContainer,
   NextDateBtn,
+  NoImg,
   PrevDateBtn,
-  Wrapper,
 } from "./MatchListTemplate-style";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import axios from "axios";
@@ -87,16 +87,18 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
   }, [fetchMatches]);
 
   return (
-    <Wrapper>
+    <>
       {isLoading && <Loading isLoading={isLoading} />}
       <LeagueLogoContainer>
-        {leagueInfo.emblem && (
+        {leagueInfo.emblem ? (
           <Image
             src={leagueInfo.emblem}
+            alt={leagueInfo.name as string}
             width={200}
             height={200}
-            alt={leagueInfo.name as string}
           />
+        ) : (
+          <NoImg />
         )}
       </LeagueLogoContainer>
       <DateBoxContainer>
@@ -112,7 +114,7 @@ const MatchListTemplate = ({ league }: LeagueTypeProps) => {
         <NextDateBtn onClick={handleMoveNextDate}>{">"}</NextDateBtn>
       </DateBoxContainer>
       <MatchList data={matches} />
-    </Wrapper>
+    </>
   );
 };
 
