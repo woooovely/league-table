@@ -1,7 +1,6 @@
 import { NewsDataTypes } from "@/types/news";
 import {
   Detail,
-  NewsContainer,
   NewsImage,
   NewsItemBlock,
   NewsLink,
@@ -10,11 +9,11 @@ import {
   Title,
   Wrapper,
 } from "./NewsTemplate-style";
-import premierThumbnail from '@/public/premier_thumbnail.svg';
-import bundesThumbnail from '@/public/bundes_thumbnail.svg';
-import laligaThumbnail from '@/public/laliga_thumbnail.svg';
-import serieThumbnail from '@/public/serie_thumbnail.svg';
-import leagueThumbnail from '@/public/league_thumbnail.svg';
+import premierThumbnail from "@/public/premier_thumbnail.svg";
+import bundesThumbnail from "@/public/bundes_thumbnail.svg";
+import laligaThumbnail from "@/public/laliga_thumbnail.svg";
+import serieThumbnail from "@/public/serie_thumbnail.svg";
+import leagueThumbnail from "@/public/league_thumbnail.svg";
 import championsThumbnail from "@/public/champions_thumbnail.png";
 import { load } from "cheerio";
 
@@ -26,51 +25,42 @@ interface NewsProps {
 const NewsTemplate = ({ items, league }: NewsProps) => {
   const handleThumbnail = () => {
     switch (league) {
-      case 'premier':
+      case "premier":
         return premierThumbnail;
 
-      case 'bundes':
+      case "bundes":
         return bundesThumbnail;
 
-      case 'laliga':
+      case "laliga":
         return laligaThumbnail;
 
-      case 'serie':
+      case "serie":
         return serieThumbnail;
 
-      case 'league':
+      case "league":
         return leagueThumbnail;
 
       default:
         return championsThumbnail;
     }
-  }
+  };
 
   return (
     <Wrapper>
-      <NewsContainer>
-        <Title>인기 급상승 뉴스</Title>
-        <NewsItemBlock>
-          {items.map((data, index) => (
-            <NewsLink href={data.originallink} key={index}>
-              <Thumbnail>
-                <NewsImage
-                  src={handleThumbnail()}
-                  alt="썸네일"
-                  width={200}
-                  height={200}
-                />
-                <Detail>
-                  <NewsTitle>
-                    {load(data.title).root().text()}
-                  </NewsTitle>
-                  {load(data.description).root().text()}
-                </Detail>
-              </Thumbnail>
-            </NewsLink>
-          ))}
-        </NewsItemBlock>
-      </NewsContainer>
+      <Title>인기 급상승 뉴스</Title>
+      <NewsItemBlock>
+        {items.map((data, index) => (
+          <NewsLink>
+            <Thumbnail href={data.originallink} target="_blank" key={index}>
+              <NewsImage src={handleThumbnail()} alt="썸네일" />
+              <Detail>
+                <NewsTitle>{load(data.title).root().text()}</NewsTitle>
+                {load(data.description).root().text()}
+              </Detail>
+            </Thumbnail>
+          </NewsLink>
+        ))}
+      </NewsItemBlock>
     </Wrapper>
   );
 };
