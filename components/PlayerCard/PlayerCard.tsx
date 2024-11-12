@@ -1,22 +1,17 @@
 import { Player } from "@/types/player";
 import {
-  BioAndPosition,
-  BioContainer,
   NameAndTeam,
   PlayerBio,
   PlayerBioStat,
-  PlayerBioStatTitle,
-  PlayerBioStatValue,
-  PlayerHead,
-  PlayerHeader,
+  PlayerCardWrap,
   PlayerName,
   Team,
-  TeamLink,
   Wrapper,
 } from "./PlayerCard-style";
 import Image from "next/image";
 import { nationality } from "@/constants/nationality";
 import { playerPosition } from "@/constants/player-position";
+import Link from "next/link";
 
 interface Props {
   data: Player;
@@ -30,62 +25,39 @@ const PlayerCard = ({ data }: Props) => {
     return date.getFullYear() - parseInt(birthYear) + 1;
   };
 
+  const playerInfo = [
+    { value: `${getAge(data.dateOfBirth)}세`, title: data.dateOfBirth },
+    { value: nationality[data.nationality], title: "국적" },
+    { value: data.shirtNumber, title: "등번호" },
+    { value: playerPosition[data.section], title: "포지션" },
+  ];
+
   return (
     <Wrapper>
-      <PlayerHeader>
-        <PlayerHead>
-          <NameAndTeam>
-            <PlayerName>{data.name}</PlayerName>
-            <TeamLink href={`/teams/${data.currentTeam.id}/overview`}>
-              <Team>
-                <Image
-                  src={data.currentTeam.crest}
-                  alt={data.currentTeam.name}
-                  width={20}
-                  height={20}
-                />
-                {data.currentTeam.name}
-              </Team>
-            </TeamLink>
-          </NameAndTeam>
-        </PlayerHead>
-        <BioAndPosition>
-          <BioContainer>
-            <PlayerBio>
-              <PlayerBioStat>
-                <PlayerBioStatValue>{`${getAge(
-                  data.dateOfBirth
-                )}세`}</PlayerBioStatValue>
-                <PlayerBioStatTitle>
-                  <span>{data.dateOfBirth}</span>
-                </PlayerBioStatTitle>
-              </PlayerBioStat>
-              <PlayerBioStat>
-                <PlayerBioStatValue>
-                  {nationality[data.nationality]}
-                </PlayerBioStatValue>
-                <PlayerBioStatTitle>
-                  <span>국적</span>
-                </PlayerBioStatTitle>
-              </PlayerBioStat>
-              <PlayerBioStat>
-                <PlayerBioStatValue>{data.shirtNumber}</PlayerBioStatValue>
-                <PlayerBioStatTitle>
-                  <span>등번호</span>
-                </PlayerBioStatTitle>
-              </PlayerBioStat>
-              <PlayerBioStat>
-                <PlayerBioStatValue>
-                  {playerPosition[data.section]}
-                </PlayerBioStatValue>
-                <PlayerBioStatTitle>
-                  <span>포지션</span>
-                </PlayerBioStatTitle>
-              </PlayerBioStat>
-            </PlayerBio>
-          </BioContainer>
-        </BioAndPosition>
-      </PlayerHeader>
+      <PlayerCardWrap>
+        <NameAndTeam>
+          <PlayerName>{data.name}</PlayerName>
+          <Link href={`/teams/${data.currentTeam.id}/overview`}>
+            <Team>
+              <Image
+                src={data.currentTeam.crest}
+                alt={data.currentTeam.name}
+                width={20}
+                height={20}
+              />
+              {data.currentTeam.name}
+            </Team>
+          </Link>
+        </NameAndTeam>
+        <PlayerBio>
+          {playerInfo.map((v, i) => (
+            <PlayerBioStat key={i}>
+              {v.value}
+              <span>{v.title}</span>
+            </PlayerBioStat>
+          ))}
+        </PlayerBio>
+      </PlayerCardWrap>
     </Wrapper>
   );
 };

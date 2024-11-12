@@ -1,12 +1,8 @@
 import { Matches } from "@/types/matches";
 import {
   AwayTeamContainer,
-  AwayTeamLogoConatiner,
-  AwayTeamName,
   Container,
   HomeTeamContainer,
-  HomeTeamLogoContainer,
-  HomeTeamName,
   InfoText,
   MatchContainer,
   MatchesContainer,
@@ -25,7 +21,6 @@ interface MatchListProps {
 }
 
 const MatchList = ({ data }: MatchListProps) => {
-
   return (
     <Wrapper>
       <InfoText>*현지시간 기준</InfoText>
@@ -36,17 +31,13 @@ const MatchList = ({ data }: MatchListProps) => {
               <Container>
                 {item.status === "FINISHED" && <MatchType>경기 종료</MatchType>}
                 <HomeTeamContainer>
-                  <HomeTeamName>
-                    {shortTeamName[item.homeTeam.shortName]}
-                  </HomeTeamName>
-                  <HomeTeamLogoContainer>
-                    <Image
-                      src={item.homeTeam.crest}
-                      width={22}
-                      height={22}
-                      alt={item.homeTeam.name}
-                    />
-                  </HomeTeamLogoContainer>
+                  <span>{shortTeamName[item.homeTeam.shortName]}</span>
+                  <Image
+                    src={item.homeTeam.crest}
+                    alt={item.homeTeam.name}
+                    width={22}
+                    height={22}
+                  />
                 </HomeTeamContainer>
               </Container>
               {item.status === "FINISHED" ? (
@@ -57,17 +48,13 @@ const MatchList = ({ data }: MatchListProps) => {
                 <MatchTime>{item.utcDate.slice(11, 16)}</MatchTime>
               )}
               <AwayTeamContainer>
-                <AwayTeamLogoConatiner>
-                  <Image
-                    src={item.awayTeam.crest}
-                    width={22}
-                    height={22}
-                    alt={item.awayTeam.name}
-                  />
-                </AwayTeamLogoConatiner>
-                <AwayTeamName>
-                  {shortTeamName[item.awayTeam.shortName]}
-                </AwayTeamName>
+                <Image
+                  src={item.awayTeam.crest}
+                  alt={item.awayTeam.name}
+                  width={22}
+                  height={22}
+                />
+                <span>{shortTeamName[item.awayTeam.shortName]}</span>
               </AwayTeamContainer>
             </MatchContainer>
           ))}

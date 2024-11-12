@@ -1,21 +1,21 @@
 import styled from "styled-components";
 import DatePicker from "react-datepicker";
 
-export const Wrapper = styled.div`
-  margin-top: 50px;
-`;
-
 export const LeagueLogoContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
+`;
+
+export const NoImg = styled.div`
+  display: flex;
+  height: 220px;
 `;
 
 export const DateBoxContainer = styled.div`
   display: flex;
   justify-content: center;
-  display: flex;
-  gap: 50px;
-  margin-top: 50px;
+  gap: 70px;
 `;
 
 export const DateBox = styled(DatePicker)`
