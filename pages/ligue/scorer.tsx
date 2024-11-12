@@ -2,25 +2,24 @@ import Head from "next/head";
 import axios from "axios";
 import MainHeader from "@/components/MainHeader";
 import SubHeader from "@/components/SubHeader";
-import RankTable from "@/components/RankTable/RankTable";
-import { SeasonProps, Team } from "@/types/rank-table";
+import { Scorer } from "@/types/scorer-type";
+import ScorerRank from "@/components/ScorerRank/ScorerRank";
 import { Competition } from "@/types/competition";
 
-interface TableDataProps {
-  teams: Team[];
+interface ScorerProps {
+  scorers: Scorer[];
   competition: Competition;
-  season: SeasonProps;
 }
 
-const LeagueRank = ({ teams, competition, season }: TableDataProps) => {
+const LigueScorer = ({ scorers, competition }: ScorerProps) => {
   return (
     <div>
       <Head>
-        <title>24-25 리그1 순위</title>
+        <title>24-25 리그1 득점왕</title>
       </Head>
       <MainHeader />
-      <SubHeader league="league" />
-      <RankTable teams={teams} competition={competition} season={season} />
+      <SubHeader league="ligue" />
+      <ScorerRank scorers={scorers} competition={competition} />
     </div>
   );
 };
@@ -28,7 +27,7 @@ const LeagueRank = ({ teams, competition, season }: TableDataProps) => {
 export const getServerSideProps = async () => {
   try {
     const response = await axios.get(
-      "https://api.football-data.org/v4/competitions/FL1/standings",
+      "https://api.football-data.org/v4/competitions/FL1/scorers",
       {
         headers: {
           "X-Auth-Token": process.env.API_TOKEN,
@@ -39,21 +38,19 @@ export const getServerSideProps = async () => {
 
     return {
       props: {
-        teams: tableData.standings[0].table,
+        scorers: tableData.scorers,
         competition: tableData.competition,
-        season: tableData.season,
       },
     };
   } catch (error) {
     console.error(error);
     return {
       props: {
-        table: [],
+        scorers: [],
         competition: {},
-        season: {},
       },
     };
   }
 };
 
-export default LeagueRank;
+export default LigueScorer;

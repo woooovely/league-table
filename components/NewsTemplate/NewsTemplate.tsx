@@ -37,7 +37,7 @@ const NewsTemplate = ({ items, league }: NewsProps) => {
       case "serie":
         return serieThumbnail;
 
-      case "league":
+      case "ligue":
         return leagueThumbnail;
 
       default:

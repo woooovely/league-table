@@ -23,7 +23,7 @@ const MainHeader = () => {
             <LinkStyle href="/serie/rank">세리에A</LinkStyle>
           </Categories>
           <Categories>
-            <LinkStyle href="/league/rank">리그1</LinkStyle>
+            <LinkStyle href="/ligue/rank">리그1</LinkStyle>
           </Categories>
           <Categories>
             <LinkStyle href="/champions/rank">챔피언스리그</LinkStyle>

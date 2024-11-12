@@ -15,15 +15,15 @@ interface NewsProps {
   items: News[];
 }
 
-const LeagueNews = ({ items }: NewsProps) => {
+const LigueNews = ({ items }: NewsProps) => {
   return (
     <div>
       <Head>
         <title>리그1 뉴스</title>
       </Head>
       <MainHeader />
-      <SubHeader league="league" />
-      <NewsTemplate items={items} league="league" />
+      <SubHeader league="ligue" />
+      <NewsTemplate items={items} league="ligue" />
     </div>
   );
 };
@@ -56,4 +56,4 @@ export const getServerSideProps = async () => {
   }
 };
 
-export default LeagueNews;
+export default LigueNews;

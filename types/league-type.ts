@@ -3,6 +3,6 @@ export const leagueType: Record<string, string> = {
     'bundes': 'BL1',
     'laliga': 'PD',
     'serie': 'SA',
-    'league': 'FL1',
+    'ligue': 'FL1',
     'champions': 'CL'
 }

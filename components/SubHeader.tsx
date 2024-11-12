@@ -77,7 +77,7 @@ const HeaderContainer = styled.nav<SubHeaderProps>`
       ? "url('/laliga_header.svg')"
       : props.league === "serie"
       ? "url('/serie_header.svg')"
-      : props.league === "league"
+      : props.league === "ligue"
       ? "url('/league_header.svg')"
       : "url('/champions_header.svg')"};
   background-size: cover;
