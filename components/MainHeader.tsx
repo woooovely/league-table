@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { categories } from "@/data/categories";
 
 const MainHeader = () => {
   const router = useRouter();
@@ -8,26 +9,15 @@ const MainHeader = () => {
   return (
     <>
       <HeaderContainer>
-        <LogoText onClick={() => router.push("/")}>Soccer Table</LogoText>
+        <LinkStyle href="/premier/rank">
+          <LogoText>Soccer Table</LogoText>
+        </LinkStyle>
         <CategoryContainer>
-          <Categories>
-            <LinkStyle href="/premier/rank">프리미어리그</LinkStyle>
-          </Categories>
-          <Categories>
-            <LinkStyle href="/bundes/rank">분데스리가</LinkStyle>
-          </Categories>
-          <Categories>
-            <LinkStyle href="/laliga/rank">라리가</LinkStyle>
-          </Categories>
-          <Categories>
-            <LinkStyle href="/serie/rank">세리에A</LinkStyle>
-          </Categories>
-          <Categories>
-            <LinkStyle href="/ligue/rank">리그1</LinkStyle>
-          </Categories>
-          <Categories>
-            <LinkStyle href="/champions/rank">챔피언스리그</LinkStyle>
-          </Categories>
+          {categories.map((item, index) => (
+            <Categories key={index}>
+              <LinkStyle href={`${item.link}/rank`}>{item.name}</LinkStyle>
+            </Categories>
+          ))}
         </CategoryContainer>
       </HeaderContainer>
     </>
