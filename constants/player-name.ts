@@ -7,8 +7,8 @@ export const plPlayerName: TranslatedKoreanVer = {
     "Bryan Mbeumo": "브라이언 음뵈모",
     "Danny Welbeck": "대니 웰벡",
     "Nicolas Jackson": "니콜라스 잭슨",
-    "Luis Díaz": "루이스 디아스",
-    "Ollie Watkins": "올리 왓킨스",
+    "Yoane Wissa": "요아네 위사",
+    "Matheus Cunha": "마테우스 쿠냐",
     "Liam Delap": "리암 델랍",
     "Chris Wood": "크리스 우드",
 }
@@ -21,9 +21,9 @@ export const bundesPlayerName: TranslatedKoreanVer = {
     "Ermedin Demirovic": "에르메딘 데미로비치",
     "Jonathan Burkardt": "요나탄 부르카르트",
     "Victor Boniface": "빅터 보니페이스",
-    "Loïs Openda": "로이스 오펜다",
-    "Deniz Undav": "데니스 운다브",
-    "Michael Olise": "마이클 올리세"
+    "Sehrou Guirassy": "세루 기라시",
+    "Jamal Musiala": "자말 무시알라",
+    "Hugo Ekitike": "위고 에키티케"
 }
 
 export const laligaPlayerName: TranslatedKoreanVer = {
@@ -59,7 +59,7 @@ export const leaguePlayerName: TranslatedKoreanVer = {
     "Keito Nakamura": "나카무라 케이토",
     "Kang-in Lee": "이강인",
     "Ousmane Dembélé": "우스만 뎀벨레",
-    "Luis Henrique": "루이스 엔리케",
+    "Hamed Traoré": "아메드 트라오레",
     "Evann Guessand": "에반 게상",
     "Andrey Santos": "안드레이 산투스",
     "Zuriko Davitashvili": "주리코 다비타슈빌리"
