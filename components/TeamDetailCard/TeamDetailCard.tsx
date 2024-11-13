@@ -1,5 +1,7 @@
 import { TeamInformation } from "@/types/team-info";
 import {
+  Country,
+  NameAndCountry,
   NavContainer,
   NavMenu,
   TeamCard,
@@ -11,30 +13,13 @@ import {
 import Image from "next/image";
 import { convertTeamName } from "@/utils/convert";
 import { useRouter } from "next/router";
+import { nationality } from "@/constants/nationality";
+import { navData } from "@/data/navigation-data";
 
 interface Props {
   data: TeamInformation;
   league: string;
 }
-
-const navData = [
-  {
-    name: "팀 개요",
-    path: "overview",
-  },
-  {
-    name: "소속 리그/컵",
-    path: "competitions",
-  },
-  {
-    name: "감독",
-    path: "coach",
-  },
-  {
-    name: "스쿼드",
-    path: "squad",
-  },
-];
 
 const TeamDetailCard = ({ data, league }: Props) => {
   const router = useRouter();
@@ -46,7 +31,10 @@ const TeamDetailCard = ({ data, league }: Props) => {
           <TeamLogoContainer>
             <Image src={data.crest} alt={data.name} width={42} height={42} />
           </TeamLogoContainer>
-          <TeamName>{convertTeamName(league, data.name)}</TeamName>
+          <NameAndCountry>
+            <TeamName>{convertTeamName(league, data.name)}</TeamName>
+            <Country>{nationality[data.area.name]}</Country>
+          </NameAndCountry>
         </TeamContainer>
         <NavContainer>
           {navData.map((item, index) => (

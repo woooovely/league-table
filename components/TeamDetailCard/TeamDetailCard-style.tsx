@@ -25,9 +25,19 @@ export const TeamLogoContainer = styled.div`
   align-items: center;
 `;
 
+export const NameAndCountry = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
 export const TeamName = styled.span`
   font-size: 23px;
 `;
+
+export const Country = styled.span`
+  font-size: 15px;
+  color: gray;
+`
 
 export const NavContainer = styled.nav`
   padding: 0px 32px;
