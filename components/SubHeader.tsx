@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { subCategories } from "@/data/sub-categories";
 
 interface SubHeaderProps {
   league: string;
@@ -10,26 +11,13 @@ const SubHeader = ({ league }: SubHeaderProps) => {
     <>
       <HeaderContainer league={league}>
         <CategoryContainer>
-          <Categories>
-            <LinkStyle href={`/${league}/rank`} league={league}>
-              리그 순위
-            </LinkStyle>
-          </Categories>
-          <Categories>
-            <LinkStyle href={`/${league}/scorer`} league={league}>
-              득점왕
-            </LinkStyle>
-          </Categories>
-          <Categories>
-            <LinkStyle href={`/${league}/news`} league={league}>
-              리그 소식
-            </LinkStyle>
-          </Categories>
-          <Categories>
-            <LinkStyle href={`/${league}/matches`} league={league}>
-              경기 일정
-            </LinkStyle>
-          </Categories>
+          {subCategories.map((item, index) => (
+            <Categories key={index}>
+              <LinkStyle href={`/${league}/${item.link}`} league={league}>
+                {item.title}
+              </LinkStyle>
+            </Categories>
+          ))}
         </CategoryContainer>
       </HeaderContainer>
     </>
