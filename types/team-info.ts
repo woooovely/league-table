@@ -1,8 +1,10 @@
+import { Area } from "./area";
 import { Coach } from "./coach";
 import { Competition } from "./competition";
 import { Squad } from "./squad";
 
 export interface TeamInformation {
+    area: Area;
     id: number;
     name: string;
     shortName: string;
